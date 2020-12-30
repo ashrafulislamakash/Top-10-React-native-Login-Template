@@ -11,11 +11,9 @@ import {
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { useTheme } from '@react-navigation/native';
 
 
 const Splash = ({ navigation }) => {
-    const { colors } = useTheme();
 
     return (
         <View style={styles.container}>
@@ -31,9 +29,7 @@ const Splash = ({ navigation }) => {
             </View>
 
             <Animatable.View
-                style={[styles.footer, {
-                    backgroundColor: colors.background
-                }]}
+                style={styles.footer}
                 animation="fadeInUpBig" >
 
                 <Text style={styles.title}>Connected with Damsonsoft</Text>

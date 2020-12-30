@@ -6,160 +6,118 @@ import {
     TextInput,
     StyleSheet,
     StatusBar,
-    ImageBackground
+    Image,
+    KeyboardAvoidingView,
+    ImageBackground,
+    Dimensions
 } from 'react-native';
 import { Card } from 'react-native-paper';
-import LinearGradient from 'react-native-linear-gradient';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const SignUpScreen7 = ({ navigation }) => {
 
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView behavior="padding" style={styles.container}>
+            <StatusBar barStyle="light-content" hidden={false} backgroundColor="transparent" translucent={true} />
+            <ImageBackground source={require('../../assets/bg7.png')}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    resizeMode: 'cover',
+                }}>
 
-            <StatusBar barStyle="light-content" hidden={false} backgroundColor="#00701a" translucent={true} />
-            <ImageBackground source={require('../../assets/bg5.png')}
-                style={styles.backgroundstyle}>
+                <Image source={require('../../assets/logo.png')}
+                    style={{
+                        width: Dimensions.get('window').width / 3,
+                        width: Dimensions.get('window').width / 3,
+                        alignSelf: 'center',
+                        resizeMode: 'contain',
+                    }}>
+                </Image>
 
-                <View style={styles.mainBody}>
+                <Card style={styles.cardStyle}>
+                    <TextInput style={styles.inputstyle}
+                        placeholder="Username"
+                        autoCapitalize={'none'}
+                        returnKeyType={'done'}
+                        autoCorrect={false}
+                    />
+                    <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1, }} />
 
-                    <Card style={styles.cardStyle}>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Email"
-                                placeholderTextColor="#8b9cb5"
-                                autoCapitalize="none"
-                            />
-                        </View>
+                    <TextInput style={styles.inputstyle}
+                        secureTextEntry={true}
+                        placeholder="E-mail"
+                        returnKeyType={'done'}
+                        autoCapitalize={'none'}
+                        autoCorrect={false}
+                    />
+                    <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1, }} />
+                    <TextInput style={styles.inputstyle}
+                        secureTextEntry={true}
+                        placeholder="Password"
+                        returnKeyType={'done'}
+                        secureTextEntry={true}
+                        autoCapitalize={'none'}
+                        autoCorrect={false}
+                    />
+                    <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1, }} />
 
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Username"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Password"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
-
-                        <View style={styles.button}>
-                            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-                                <LinearGradient
-                                    colors={['#FF839D', '#F50B9A']}
-                                    style={styles.signIn} >
-                                    <MaterialIcons name="arrow-forward" color="#fff" size={20} />
-                                </LinearGradient>
-                            </TouchableOpacity>
-
-                        </View>
-
-                    </Card>
-
-                    <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen7')}>
-                        <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-                            Dont Have an Account?
-                        <Text style={{ color: '#FF9F40' }}>
-                                Sign Up
-                        </Text >
-                        </Text>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SignUpScreen7')}>
+                        <Text style={{ fontSize: 20, color: '#fff' }}> Sign Up</Text>
                     </TouchableOpacity>
-                </View>
+                </Card>
+
+
+                <TouchableOpacity onPress={() => navigation.navigate('SignInScreen7')}>
+                    <Text style={{ textAlign: 'center', marginTop: 60 }}>
+                        Don’t have an account ?
+                        <Text style={{ color: '#fff' }}>
+                            Sign Up
+                        </Text >
+                    </Text>
+                </TouchableOpacity>
+
             </ImageBackground>
-        </View>
+        </KeyboardAvoidingView>
     );
 };
 
 export default SignUpScreen7;
 
+
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
-    },
-
-    backgroundstyle: {
-        width: '100%',
-        height: '100%'
-    },
-
-    mainBody: {
-        flex: 1,
+        alignItems: 'center',
         justifyContent: 'center',
-        alignContent: 'center',
-        alignSelf: 'center',
     },
+
 
     cardStyle: {
-        maxHeight: 300,
-        maxWidth: 300,
-        padding: 30,
-        height: 300,
-        width: 300,
         alignSelf: 'center',
-        justifyContent: "center",
-        borderRadius: 150,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: -5,
-            height: 5,
-        },
-        shadowOpacity: 0.32,
-        shadowRadius: 4.46,
-        elevation: 5,
-    },
-    SectionStyle: {
-        width: 170,
-        height: 35,
-        alignSelf: 'center',
-        flexDirection: 'row',
-        marginTop: 30
+        backgroundColor: '#fff',
+        alignContent: 'center',
+        margin: 5,
+        width: Dimensions.get('window').width / 1.5,
+        height: Dimensions.get('window').height / 3.6,
     },
 
-    inputStyle: {
-        flex: 1,
+    inputstyle: {
         alignSelf: 'center',
-        textAlign: 'center',
-        alignContent: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        borderWidth: 1,
-        borderRadius: 20,
-        borderColor: '#8b9cb5',
+        width: Dimensions.get('window').width / 1.5,
+        height: 50,
+        padding: 10,
+
     },
+
     button: {
         alignSelf: 'center',
-        marginTop: 20,
-        width: 45,
-    },
-
-    signIn: {
-        width: '100%',
-        height: 35,
+        margin: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 20,
+        backgroundColor: "#E268B7",
+        width: Dimensions.get('window').width / 3,
+        height: 50,
     },
 
-    signupTextStyle: {
-        marginBottom: 60,
-    },
-
-    iconViewStyle: {
-        flex: 1,
-        flexDirection: 'row',
-        marginTop: 20,
-    },
-
-    iconStyle: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        width: 30,
-        height: 30,
-    }
 });
