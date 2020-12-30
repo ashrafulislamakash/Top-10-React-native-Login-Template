@@ -1,77 +1,100 @@
-import React from 'react';
+import React, { useState } from "react";
+
 import {
     View,
     Text,
     TouchableOpacity,
-    TextInput,
     StyleSheet,
     StatusBar,
-    ImageBackground
+    TextInput,
+    ImageBackground,
+    Image
 } from 'react-native';
-import { Card } from 'react-native-paper';
+
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import CheckBox from '@react-native-community/checkbox'
 
 const SignUpScreen9 = ({ navigation }) => {
 
+    const [isSelected, setSelection] = useState(false);
+
     return (
         <View style={styles.container}>
+            <StatusBar barStyle="light-content" hidden={false} backgroundColor="transparent" translucent={true} />
+            <View style={styles.hederSection}>
 
-            <StatusBar barStyle="light-content" hidden={false} backgroundColor="#00701a" translucent={true} />
-            <ImageBackground source={require('../../assets/bg5.png')}
-                style={styles.backgroundstyle}>
+                <ImageBackground
+                    style={{ width: '100%', height: '100%' }}
+                    source={require('../../assets/bg.png')}>
+                    <Image
+                        source={require('../../assets/livingLogo.png')}
+                        style={styles.headerLogo}
+                    />
 
-                <View style={styles.mainBody}>
+                    <View style={styles.buttonSection}>
 
-                    <Card style={styles.cardStyle}>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Email"
-                                placeholderTextColor="#8b9cb5"
-                                autoCapitalize="none"
-                            />
-                        </View>
+                        <TouchableOpacity style={[styles.rightbutton, { backgroundColor: "#4CB8C4" }]} onPress={() => navigation.navigate('SignInScreen9')}>
+                            <Text style={{ color: '#fff' }}>SIGN IN</Text>
+                        </TouchableOpacity>
 
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Username"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Password"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
+                        <TouchableOpacity style={[styles.leftbutton, { backgroundColor: "#fff" }]} onPress={() => navigation.navigate('HomeScreen')}>
+                            <Text style={{ color: '#4CB8C4' }}>SIGN UP</Text>
+                        </TouchableOpacity>
+                    </View>
+                </ImageBackground>
+            </View>
 
-                        <View style={styles.button}>
-                            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-                                <LinearGradient
-                                    colors={['#FF839D', '#F50B9A']}
-                                    style={styles.signIn} >
-                                    <MaterialIcons name="arrow-forward" color="#fff" size={20} />
-                                </LinearGradient>
-                            </TouchableOpacity>
 
-                        </View>
+            <View style={styles.footerSection}>
 
-                    </Card>
+                <View style={styles.cardStyle}>
+                    <View>
+                        <TextInput
+                            style={styles.inputStyle}
+                            placeholder="Username"
+                            placeholderTextColor="#8b9cb5"
+                        />
+                    </View>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen9')}>
-                        <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-                            Dont Have an Account?
-                        <Text style={{ color: '#FF9F40' }}>
-                                Sign Up
-                        </Text >
-                        </Text>
+                    <View>
+                        <TextInput
+                            style={styles.inputStyle}
+                            placeholder="Email"
+                            placeholderTextColor="#8b9cb5"
+                        />
+                    </View>
+                    <View>
+                        <TextInput
+                            style={styles.inputStyle}
+                            placeholder="Password"
+                            secureTextEntry={true}
+                            placeholderTextColor="#8b9cb5"
+                        />
+                    </View>
+                </View>
+
+                <View style={styles.checkboxContainer}>
+                    <CheckBox
+                        title='Click Here'
+                        value={isSelected}
+                        onValueChange={setSelection}
+                    />
+                    <Text style={styles.checkboxlabel}>I agree with Private Policy</Text>
+                </View>
+
+                <View style={styles.buttonSection}>
+                    <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('HomeScreen')}>
+                        <LinearGradient colors={['#4CB8C4', '#3CD3AD']} style={styles.signupButton} >
+                            <Text style={{ color: '#fff' }}>PROCEED</Text>
+                            <MaterialIcons name="navigate-next" color="#fff" size={20} />
+                        </LinearGradient>
                     </TouchableOpacity>
                 </View>
-            </ImageBackground>
+
+            </View>
         </View>
+
     );
 };
 
@@ -82,84 +105,93 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 
-    backgroundstyle: {
-        width: '100%',
-        height: '100%'
+    hederSection: {
+        flex: 1
     },
 
-    mainBody: {
-        flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
+    headerLogo: {
         alignSelf: 'center',
+        marginTop: 50
+    },
+
+    footerSection: {
+        marginTop: 50,
+        flex: 2,
+    },
+
+    buttonSection: {
+        flexDirection: 'row',
+        alignSelf: 'center',
+        marginTop: 60,
+
+    },
+
+    rightbutton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderBottomStartRadius: 15,
+        borderTopStartRadius: 15,
+        width: 120,
+        height: 50,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.32,
+        shadowRadius: 6,
+        elevation: 10,
+
+    },
+    leftbutton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderBottomEndRadius: 15,
+        borderTopEndRadius: 15,
+        width: 120,
+        height: 50,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.32,
+        shadowRadius: 6,
+        elevation: 10,
+
     },
 
     cardStyle: {
-        maxHeight: 300,
-        maxWidth: 300,
-        padding: 30,
-        height: 300,
-        width: 300,
+        height: 100,
+        width: 240,
         alignSelf: 'center',
-        justifyContent: "center",
-        borderRadius: 150,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: -5,
-            height: 5,
-        },
-        shadowOpacity: 0.32,
-        shadowRadius: 4.46,
-        elevation: 5,
-    },
-    SectionStyle: {
-        width: 170,
-        height: 35,
-        alignSelf: 'center',
-        flexDirection: 'row',
-        marginTop: 30
     },
 
     inputStyle: {
-        flex: 1,
-        alignSelf: 'center',
-        textAlign: 'center',
-        alignContent: 'center',
-        justifyContent: 'center',
-        color: 'white',
+        width: 240,
+        height: 50,
         borderWidth: 1,
-        borderRadius: 20,
-        borderColor: '#8b9cb5',
-    },
-    button: {
-        alignSelf: 'center',
-        marginTop: 20,
-        width: 45,
+        padding: 10,
+        borderColor: '#E2E6EA',
     },
 
-    signIn: {
-        width: '100%',
-        height: 35,
+    checkboxContainer: {
+        flexDirection: "row",
+        alignSelf: 'center',
+        alignItems: 'center',
+        marginTop: 60,
+    },
+
+    checkboxlabel: {
+        margin: 5
+    },
+
+    signupButton: {
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 20,
+        borderRadius: 10,
+        width: 240,
+        height: 50,
     },
-
-    signupTextStyle: {
-        marginBottom: 60,
-    },
-
-    iconViewStyle: {
-        flex: 1,
-        flexDirection: 'row',
-        marginTop: 20,
-    },
-
-    iconStyle: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        width: 30,
-        height: 30,
-    }
 });

@@ -68,6 +68,7 @@ const SignUpScreen10 = ({ navigation }) => {
                     />
                     <Text style={styles.checkboxlabel}>I agree with Private Policy</Text>
                 </View>
+                
                 <View style={styles.buttonSection}>
                     <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('HomeScreen')}>
                         <Text style={{ fontSize: 20, color: '#fff' }}> Sign In</Text>

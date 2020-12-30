@@ -13,10 +13,9 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Feather from 'react-native-vector-icons/Feather';
 
 const SignInScreen9 = ({ navigation }) => {
-
-    const [isSelected, setSelection] = useState(false);
 
 
     return (
@@ -34,11 +33,11 @@ const SignInScreen9 = ({ navigation }) => {
 
                     <View style={styles.buttonSection}>
 
-                        <TouchableOpacity style={[styles.rightbutton, { backgroundColor: "#4CB8C4" }]}>
+                        <TouchableOpacity style={[styles.rightbutton, { backgroundColor: "#4CB8C4" }]} >
                             <Text style={{ color: '#fff' }}>SIGN IN</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={[styles.leftbutton, { backgroundColor: "#fff" }]}>
+                        <TouchableOpacity style={[styles.leftbutton, { backgroundColor: "#fff" }]} onPress={() => navigation.navigate('SignUpScreen9')}>
                             <Text style={{ color: '#4CB8C4' }}>SIGN UP</Text>
                         </TouchableOpacity>
                     </View>
@@ -48,7 +47,8 @@ const SignInScreen9 = ({ navigation }) => {
 
             <View style={styles.footerSection}>
 
-                <View style={styles.singingContiner}>
+
+                <View style={styles.cardStyle}>
                     <View>
                         <TextInput
                             style={styles.inputStyle}
@@ -67,9 +67,6 @@ const SignInScreen9 = ({ navigation }) => {
                     </View>
                 </View>
 
-
-
-
                 <View style={styles.buttonSection}>
                     <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('HomeScreen')}>
                         <LinearGradient colors={['#4CB8C4', '#3CD3AD']} style={styles.signupButton} >
@@ -81,12 +78,13 @@ const SignInScreen9 = ({ navigation }) => {
 
                 <View
                     style={{
-                        borderBottomColor: 'black',
+                        marginTop: 30,
+                        borderBottomColor: '#D1D1D1',
                         borderBottomWidth: 1,
                     }}
                 />
 
-                <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen10')}>
+                <TouchableOpacity>
                     <Text style={{ textAlign: 'center', color: '#3C82FF', marginTop: 30 }}>
                         Forgot Password?
                     </Text>
@@ -110,9 +108,6 @@ const styles = StyleSheet.create({
     },
 
     headerLogo: {
-        flex: 1,
-        height: 160,
-        width: 70,
         alignSelf: 'center',
         marginTop: 50
     },
@@ -125,7 +120,7 @@ const styles = StyleSheet.create({
     buttonSection: {
         flexDirection: 'row',
         alignSelf: 'center',
-        marginBottom: -20,
+        marginTop: 45,
 
     },
 
@@ -164,29 +159,17 @@ const styles = StyleSheet.create({
 
     },
 
-    singingContiner: {
-        width: 200,
+    cardStyle: {
         height: 100,
-
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.32,
-        shadowRadius: 6,
-        elevation: 2,
-
+        width: 240,
+        alignSelf: 'center',
     },
 
     inputStyle: {
-        width: 200,
+        width: 240,
         height: 50,
-        alignSelf: 'center',
-        alignContent: 'center',
-        justifyContent: 'center',
         borderWidth: 1,
-        borderRadius: 10,
+        padding: 10,
         borderColor: '#E2E6EA',
     },
 
@@ -195,8 +178,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        margin: 20,
-        width: 300,
+        width: 240,
         height: 50,
     },
 });
