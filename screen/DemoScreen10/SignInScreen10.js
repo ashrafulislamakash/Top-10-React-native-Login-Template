@@ -8,13 +8,10 @@ import {
     StatusBar,
     TextInput,
 } from 'react-native';
-
 import CheckBox from '@react-native-community/checkbox'
-
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const SignInScreen10 = ({ navigation }) => {
-
     const [isSelected, setSelection] = useState(false);
 
 
@@ -127,7 +124,6 @@ const styles = StyleSheet.create({
     buttonSection: {
         flexDirection: 'row',
         alignSelf: 'center',
-
     },
 
     button: {
@@ -137,7 +133,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         width: 150,
         height: 50,
-
     },
 
     inputStyle: {
@@ -171,7 +166,6 @@ const styles = StyleSheet.create({
     checkboxlabel: {
         margin: 5
     },
-
 
     signupButton: {
         backgroundColor: "#3C82FF",

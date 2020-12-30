@@ -109,7 +109,7 @@ const HomeScreen = (navigation) => {
                 component={SignInScreen8}
                 options={{
                     tabBarLabel: 'Theme8',
-                    tabBarColor: "#00701a",
+                    tabBarColor: "#8300F5",
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="react" color={color} size={26} />
                     ),
