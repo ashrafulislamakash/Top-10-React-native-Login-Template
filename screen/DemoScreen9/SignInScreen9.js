@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import {
     View,
@@ -13,10 +13,8 @@ import {
 
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import Feather from 'react-native-vector-icons/Feather';
 
 const SignInScreen9 = ({ navigation }) => {
-
 
     return (
         <View style={styles.container}>
@@ -79,6 +77,7 @@ const SignInScreen9 = ({ navigation }) => {
                 <View
                     style={{
                         marginTop: 30,
+                        width: 30,
                         borderBottomColor: '#D1D1D1',
                         borderBottomWidth: 1,
                     }}
@@ -109,19 +108,18 @@ const styles = StyleSheet.create({
 
     headerLogo: {
         alignSelf: 'center',
-        marginTop: 50
+        justifyContent: 'center',
+        marginTop: 50,
     },
 
     footerSection: {
-        marginTop: 50,
-        flex: 2,
+        flex: 3,
     },
 
     buttonSection: {
+        marginTop: 40,
         flexDirection: 'row',
         alignSelf: 'center',
-        marginTop: 45,
-
     },
 
     rightbutton: {
@@ -160,9 +158,12 @@ const styles = StyleSheet.create({
     },
 
     cardStyle: {
+        marginTop: 60,
         height: 100,
         width: 240,
         alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
     inputStyle: {

@@ -6,72 +6,138 @@ import {
     TextInput,
     StyleSheet,
     StatusBar,
-    ImageBackground
 } from 'react-native';
-import { Card } from 'react-native-paper';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
+import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+
 
 const SignUpScreen6 = ({ navigation }) => {
 
     return (
-        <View style={styles.container}>
+        <LinearGradient
+            style={styles.container}
+            colors={['#8E24AA', '#311B92']}>
+            <View style={styles.container}>
+                <StatusBar barStyle="light-content" hidden={false} backgroundColor="transparent" translucent={true} />
+                <View style={styles.header}>
 
-            <StatusBar barStyle="light-content" hidden={false} backgroundColor="#00701a" translucent={true} />
-            <ImageBackground source={require('../../assets/bg5.png')}
-                style={styles.backgroundstyle}>
+                    <Text style={styles.text_header}>Welcome!</Text>
+                </View>
 
-                <View style={styles.mainBody}>
+                <Animatable.View
+                    animation="fadeInUpBig"
+                    style={styles.footer}>
 
-                    <Card style={styles.cardStyle}>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Email"
-                                placeholderTextColor="#8b9cb5"
-                                autoCapitalize="none"
-                            />
-                        </View>
+                    <View style={styles.action}>
+                        <FontAwesome name="user-o" color="#fff" size={20} />
 
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Username"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Password"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
+                        <TextInput
+                            placeholder="Your Username"
+                            placeholderTextColor="#fff"
+                            style={[styles.textInput, { color: '#fff' }]}
+                        />
+                    </View>
 
-                        <View style={styles.button}>
-                            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-                                <LinearGradient
-                                    colors={['#FF839D', '#F50B9A']}
-                                    style={styles.signIn} >
-                                    <MaterialIcons name="arrow-forward" color="#fff" size={20} />
-                                </LinearGradient>
-                            </TouchableOpacity>
+                    <Animatable.View
+                        animation="fadeInLeft"
+                        duration={500}>
+                    </Animatable.View>
 
-                        </View>
 
-                    </Card>
+                    <View style={styles.action}>
+                        <Feather name="lock" color="#fff" size={20} />
+                        <TextInput
+                            placeholder="Your Email"
+                            placeholderTextColor="#fff"
+                            style={[styles.textInput, { color: '#fff' }]}
+                        />
+                    </View>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen6')}>
-                        <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-                            Dont Have an Account?
-                        <Text style={{ color: '#FF9F40' }}>
-                                Sign Up
-                        </Text >
+                    <View style={styles.action}>
+                        <Feather name="lock" color="#fff" size={20} />
+                        <TextInput
+                            placeholder="Your Password"
+                            placeholderTextColor="#fff"
+                            style={[styles.textInput, { color: '#fff' }]}
+                        />
+                    </View>
+
+                    <Animatable.View
+                        animation="fadeInLeft"
+                        duration={500}>
+                    </Animatable.View>
+
+
+
+
+                    <Animatable.View
+                        animation="fadeInLeft"
+                        duration={500}></Animatable.View>
+
+                    <TouchableOpacity>
+                        <Text style={{ color: '#fff', marginTop: 10 }}>
+                            Forgot password?
                         </Text>
                     </TouchableOpacity>
-                </View>
-            </ImageBackground>
-        </View>
+
+                    <View style={styles.button}>
+                        <TouchableOpacity
+                            style={styles.signIn}
+                            onPress={() => navigation.navigate('HomeScreen')}>
+                            <LinearGradient
+                                colors={['#8E24AA', '#311B92']}
+                                style={styles.signIn}>
+                                <Text style={[styles.textSign, { color: '#fff' }]}>Sign Up</Text>
+                            </LinearGradient>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+                            <Text style={{ textAlign: 'center', color: '#fff', marginTop: 10, }}>
+                                Already have an account ?
+                        <Text style={{ color: '#55ACEE', paddingLeft: 10, fontSize: 18 }}>
+                                    Sign In
+                        </Text >
+                            </Text>
+                        </TouchableOpacity>
+
+                        <View style={{ flexDirection: 'row', alignItems: 'center', margin: 10 }}>
+                            <View style={{ flex: 1, height: 1, backgroundColor: '#fff' }} />
+                            <View>
+                                <Text style={{ width: 50, textAlign: 'center', color: '#fff' }}>Or</Text>
+                            </View>
+                            <View style={{ flex: 1, height: 1, backgroundColor: '#fff' }} />
+                        </View>
+
+                        <TouchableOpacity>
+                            <Text style={{ textAlign: 'center', color: '#fff', marginTop: 10, }}>
+                                Sign up with Social Networks
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.iconViewStyle}>
+                        <TouchableOpacity style={[styles.icon, { backgroundColor: '#164CBD' }]}>
+                            <MaterialCommunityIcons name="facebook" color="#fff" size={25} />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[styles.icon, { backgroundColor: '#55ACEE' }]}>
+                            <AntDesign name="twitter" color="#fff" size={25} />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[styles.icon, { backgroundColor: '#DD4B39' }]}>
+                            <AntDesign name="google" color="#fff" size={25} />
+                        </TouchableOpacity>
+                    </View>
+
+                </Animatable.View>
+            </View>
+
+        </LinearGradient >
     );
 };
 
@@ -80,86 +146,75 @@ export default SignUpScreen6;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
 
-    backgroundstyle: {
-        width: '100%',
-        height: '100%'
     },
-
-    mainBody: {
+    header: {
         flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
+        justifyContent: 'flex-end',
+        paddingHorizontal: 20,
+        paddingBottom: 10,
+    },
+    footer: {
+        flex: 3,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+        paddingHorizontal: 20,
+        paddingVertical: 30,
+    },
+    text_header: {
+        color: '#fff',
+        fontWeight: 'bold',
         alignSelf: 'center',
+        fontSize: 36,
     },
 
-    cardStyle: {
-        maxHeight: 300,
-        maxWidth: 300,
-        padding: 30,
-        height: 300,
-        width: 300,
-        alignSelf: 'center',
-        justifyContent: "center",
-        borderRadius: 150,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: -5,
-            height: 5,
-        },
-        shadowOpacity: 0.32,
-        shadowRadius: 4.46,
-        elevation: 5,
-    },
-    SectionStyle: {
-        width: 170,
-        height: 35,
-        alignSelf: 'center',
+    action: {
         flexDirection: 'row',
-        marginTop: 30
+        marginTop: 5,
+        marginBottom: 5,
+        padding: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: '#fff',
     },
 
-    inputStyle: {
+    textInput: {
         flex: 1,
-        alignSelf: 'center',
-        textAlign: 'center',
-        alignContent: 'center',
-        justifyContent: 'center',
-        color: 'white',
-        borderWidth: 1,
-        borderRadius: 20,
-        borderColor: '#8b9cb5',
-    },
-    button: {
-        alignSelf: 'center',
-        marginTop: 20,
-        width: 45,
+        marginTop: Platform.OS === 'ios' ? 0 : -12,
+        paddingLeft: 10,
+        color: '#fff',
     },
 
+    button: {
+        alignItems: 'center',
+        marginTop: 10,
+    },
     signIn: {
         width: '100%',
-        height: 35,
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 20,
+        borderRadius: 10,
     },
-
-    signupTextStyle: {
-        marginBottom: 60,
+    textSign: {
+        fontSize: 18,
+        fontWeight: 'bold',
     },
 
     iconViewStyle: {
         flex: 1,
         flexDirection: 'row',
-        marginTop: 20,
+        alignSelf: 'center',
+
     },
 
-    iconStyle: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        width: 30,
-        height: 30,
+    icon: {
+        width: 40,
+        height: 40,
+        margin: 20,
+        borderRadius: 30,
+        alignItems: 'center',
+        justifyContent: 'space-evenly'
     }
+
+
 });

@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const WelcomeScreen10 = ({navigation}) => {
+const WelcomeScreen10 = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -22,11 +22,11 @@ const WelcomeScreen10 = ({navigation}) => {
       />
 
       <View style={styles.hederSection}>
+
         <View style={styles.headerText}>
-          <Text style={{fontSize: 30, color: '#3C82FF'}}> Welcome</Text>
+          <Text style={{ fontSize: 30, color: '#3C82FF' }}> Welcome</Text>
           <Text> Please login or sign up to continue using our app.</Text>
         </View>
-
         <Image
           source={require('../../assets/bg10.png')}
           resizeMode="contain"
@@ -35,34 +35,34 @@ const WelcomeScreen10 = ({navigation}) => {
       </View>
 
       <View style={styles.footerSection}>
-        <Text style={{textAlign: 'center'}}>Enter via social networks</Text>
+        <Text style={{ textAlign: 'center' }}>Enter via social networks</Text>
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: '#76A9EA'}]}>
+            style={[styles.button, { backgroundColor: '#76A9EA' }]}>
             <MaterialCommunityIcons name="facebook" color="#fff" size={35} />
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: '#475993'}]}>
+            style={[styles.button, { backgroundColor: '#475993' }]}>
             <MaterialCommunityIcons name="twitter" color="#fff" size={35} />
           </TouchableOpacity>
         </View>
 
-        <Text style={{textAlign: 'center'}}>or login with email</Text>
+        <Text style={{ textAlign: 'center' }}>or login with email</Text>
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
             style={styles.emailSignupButton}
             onPress={() => navigation.navigate('SignUpScreen10')}>
-            <Text style={{fontSize: 20, color: '#fff'}}> Sign Up</Text>
+            <Text style={{ fontSize: 20, color: '#fff' }}> Sign Up</Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignInScreen10')}>
-          <Text style={{textAlign: 'center', marginTop: 30}}>
+          <Text style={{ textAlign: 'center', marginTop: 30 }}>
             Already have an account ?
-            <Text style={{color: '#3C82FF'}}>Login</Text>
+            <Text style={{ color: '#3C82FF' }}>Login</Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -82,9 +82,6 @@ const styles = StyleSheet.create({
   },
 
   headerText: {
-    marginTop: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
     alignSelf: 'center',
   },
 
@@ -106,19 +103,26 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    margin: 20,
+    margin: 10,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 150,
-    height: 50,
+    minWidth: 150,
+    minHeight: 50,
+    width: Dimensions.get('window').width / 8,
+    height: Dimensions.get('window').height / 13,
   },
 
   emailSignupButton: {
     backgroundColor: '#3C82FF',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 20,
-    width: 300,
-    height: 50,
+    borderRadius: 10,
+    margin: 10,
+    maxWidth: 300,
+    maxHeight: 50,
+    width: Dimensions.get('window').width / 1.2,
+    height: Dimensions.get('window').height / 13,
+
   },
 });

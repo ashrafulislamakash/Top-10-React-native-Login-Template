@@ -7,6 +7,7 @@ import {
     StyleSheet,
     StatusBar,
     TextInput,
+    Dimensions
 } from 'react-native';
 
 import CheckBox from '@react-native-community/checkbox'
@@ -68,7 +69,7 @@ const SignUpScreen10 = ({ navigation }) => {
                     />
                     <Text style={styles.checkboxlabel}>I agree with Private Policy</Text>
                 </View>
-                
+
                 <View style={styles.buttonSection}>
                     <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('HomeScreen')}>
                         <Text style={{ fontSize: 20, color: '#fff' }}> Sign In</Text>
@@ -96,25 +97,23 @@ const styles = StyleSheet.create({
     },
 
     hederSection: {
-        flex: 2
+        flex: 1.5,
     },
 
     headerText: {
         flex: 1,
-        marginTop: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        alignSelf: 'auto'
+        alignSelf: 'center',
     },
 
     footerSection: {
-        flex: 2
+        flex: 2,
     },
 
     buttonSection: {
         flexDirection: 'row',
         alignSelf: 'center',
-
     },
 
     button: {
@@ -122,14 +121,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        width: 150,
-        height: 50,
-
+        minWidth: 150,
+        minHeight: 50,
+        width: Dimensions.get('window').width / 8,
+        height: Dimensions.get('window').height / 13,
     },
 
     inputStyle: {
-        width: 345,
-        height: 50,
+        maxWidth: 345,
+        maxHeight: 50,
+        width: Dimensions.get('window').width / 1.2,
+        height: Dimensions.get('window').height / 13,
         padding: 10,
         marginTop: 10,
         marginBottom: 5,
@@ -143,30 +145,29 @@ const styles = StyleSheet.create({
 
     checkboxContainer: {
         justifyContent: 'space-evenly',
-        flexDirection: "row",
+        flexDirection: 'row',
         marginTop: 10,
         marginBottom: 10,
         alignSelf: 'center',
-
     },
 
     checkbox: {
-        alignSelf: "center",
+        alignSelf: 'center',
         backgroundColor: '#E2E6EA',
     },
 
     checkboxlabel: {
-        margin: 5
+        margin: 5,
     },
 
-
     signupButton: {
-        backgroundColor: "#3C82FF",
+        backgroundColor: '#3C82FF',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        margin: 20,
-        width: 300,
-        height: 50,
+        minWidth: 300,
+        minHeight: 50,
+        width: Dimensions.get('window').width / 1.2,
+        height: Dimensions.get('window').height / 13,
     },
 });

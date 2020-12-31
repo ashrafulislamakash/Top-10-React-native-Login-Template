@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import {
   View,
@@ -7,11 +7,12 @@ import {
   StyleSheet,
   StatusBar,
   TextInput,
+  Dimensions
 } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const SignInScreen10 = ({navigation}) => {
+const SignInScreen10 = ({ navigation }) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
@@ -24,25 +25,27 @@ const SignInScreen10 = ({navigation}) => {
       />
 
       <View style={styles.hederSection}>
+
         <View style={styles.headerText}>
-          <Text style={{fontSize: 30, color: '#3C82FF'}}> Login Now</Text>
+          <Text style={{ fontSize: 30, color: '#3C82FF' }}> Login Now</Text>
           <Text> Please login to continue using our app.</Text>
         </View>
 
-        <Text style={{textAlign: 'center'}}>Enter via social networks</Text>
+        <Text style={{ textAlign: 'center' }}>Enter via social networks</Text>
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: '#76A9EA'}]}>
+            style={[styles.button, { backgroundColor: '#76A9EA' }]}>
             <MaterialCommunityIcons name="facebook" color="#fff" size={35} />
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: '#475993'}]}>
+            style={[styles.button, { backgroundColor: '#475993' }]}>
             <MaterialCommunityIcons name="twitter" color="#fff" size={35} />
           </TouchableOpacity>
         </View>
       </View>
+
 
       <View style={styles.footerSection}>
         <View>
@@ -71,7 +74,7 @@ const SignInScreen10 = ({navigation}) => {
           />
           <Text style={styles.checkboxlabel}>Remember me</Text>
           <TouchableOpacity>
-            <Text style={[styles.checkboxlabel, {color: '#3C82FF'}]}>
+            <Text style={[styles.checkboxlabel, { color: '#3C82FF' }]}>
               Forgot password?
             </Text>
           </TouchableOpacity>
@@ -81,14 +84,14 @@ const SignInScreen10 = ({navigation}) => {
           <TouchableOpacity
             style={styles.signupButton}
             onPress={() => navigation.navigate('HomeScreen')}>
-            <Text style={{fontSize: 20, color: '#fff'}}> Sign In</Text>
+            <Text style={{ fontSize: 20, color: '#fff' }}> Sign In</Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen10')}>
-          <Text style={{textAlign: 'center', marginTop: 30}}>
+          <Text style={{ textAlign: 'center', marginTop: 30 }}>
             Don’t have an account ?
-            <Text style={{color: '#3C82FF'}}>Sign Up</Text>
+            <Text style={{ color: '#3C82FF' }}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -104,15 +107,14 @@ const styles = StyleSheet.create({
   },
 
   hederSection: {
-    flex: 2,
+    flex: 1.5,
   },
 
   headerText: {
     flex: 1,
-    marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'auto',
+    alignSelf: 'center',
   },
 
   footerSection: {
@@ -129,15 +131,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    width: 150,
-    height: 50,
+    minWidth: 150,
+    minHeight: 50,
+    width: Dimensions.get('window').width / 8,
+    height: Dimensions.get('window').height / 13,
   },
 
   inputStyle: {
-    width: 345,
-    height: 50,
+    maxWidth: 345,
+    width: Dimensions.get('window').width / 1.2,
+    height: Dimensions.get('window').height / 13,
     padding: 10,
-    marginTop: 10,
+    marginTop: 5,
     marginBottom: 5,
     alignSelf: 'center',
     alignContent: 'center',
@@ -169,8 +174,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    margin: 20,
-    width: 300,
-    height: 50,
+    minWidth: 300,
+    minHeight: 50,
+    width: Dimensions.get('window').width / 1.2,
+    height: Dimensions.get('window').height / 13,
   },
 });
