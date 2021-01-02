@@ -84,14 +84,14 @@ const SignInScreen10 = ({ navigation }) => {
           <TouchableOpacity
             style={styles.signupButton}
             onPress={() => navigation.navigate('HomeScreen')}>
-            <Text style={{ fontSize: 20, color: '#fff' }}> Sign In</Text>
+            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign In</Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen10')}>
           <Text style={{ textAlign: 'center', marginTop: 30 }}>
             Don’t have an account ?
-            <Text style={{ color: '#3C82FF' }}>Sign Up</Text>
+            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
 
   hederSection: {
-    flex: 1,
+    flex: 1.5,
   },
 
   headerText: {

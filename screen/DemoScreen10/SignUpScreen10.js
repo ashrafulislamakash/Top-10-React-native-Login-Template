@@ -72,13 +72,13 @@ const SignUpScreen10 = ({ navigation }) => {
 
                 <View style={styles.buttonSection}>
                     <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('HomeScreen')}>
-                        <Text style={{ fontSize: 20, color: '#fff' }}> Sign In</Text>
+                        <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign In</Text>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity onPress={() => navigation.navigate('SignInScreen10')}>
                     <Text style={{ textAlign: 'center', marginTop: 30 }}>
                         Already have an account ?
-                        <Text style={{ color: '#3C82FF' }}>
+                        <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>
                             Login
                         </Text >
                     </Text>
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     },
 
     hederSection: {
-        flex: 1,
+        flex: 1.5,
     },
 
     headerText: {

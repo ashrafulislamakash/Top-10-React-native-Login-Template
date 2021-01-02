@@ -62,16 +62,16 @@ const SignUpScreen7 = ({ navigation }) => {
                     <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1, }} />
 
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SignUpScreen7')}>
-                        <Text style={{ fontSize: 20, color: '#fff' }}> Sign Up</Text>
+                        <Text style={{ fontSize: 20, color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign Up</Text>
                     </TouchableOpacity>
                 </Card>
 
 
-                <TouchableOpacity onPress={() => navigation.navigate('SignInScreen7')}>
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
                     <Text style={{ textAlign: 'center', marginTop: 60 }}>
-                        Don’t have an account ?
-                        <Text style={{ color: '#fff' }}>
-                            Sign Up
+                        Already have an account ?
+                        <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+                            Sign In
                         </Text >
                     </Text>
                 </TouchableOpacity>

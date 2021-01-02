@@ -74,14 +74,14 @@ const SignInScreen6 = ({ navigation }) => {
                             <LinearGradient
                                 colors={['#8E24AA', '#311B92']}
                                 style={styles.signIn}>
-                                <Text style={[styles.textSign, { color: '#fff' }]}>Sign In</Text>
+                                <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign In</Text>
                             </LinearGradient>
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => navigation.navigate('SignInScreen6')}>
                             <Text style={{ textAlign: 'center', color: '#fff', marginTop: 10, }}>
                                 Don't have an account?
-                        <Text style={{ color: '#55ACEE', paddingLeft: 10, fontSize: 18 }}>
+                        <Text style={{ color: '#55ACEE', paddingLeft: 10, fontSize: 18, fontWeight: 'bold' }}>
                                     Sign Up
                         </Text >
                             </Text>
@@ -176,10 +176,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-    },
-    textSign: {
-        fontSize: 18,
-        fontWeight: 'bold',
     },
 
     iconViewStyle: {

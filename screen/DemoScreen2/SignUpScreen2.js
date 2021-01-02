@@ -32,31 +32,34 @@ const SignUpScreen2 = ({ navigation }) => {
                     style={styles.inputStyle}
                     placeholder="Enter username"
                     placeholderTextColor="#8b9cb5"
+                    color="#fff"
                     autoCapitalize="none"
                 />
                 <TextInput
                     style={styles.inputStyle}
                     placeholder="Enter Email"
                     placeholderTextColor="#8b9cb5"
+                    color="#fff"
                     autoCapitalize="none"
                 />
 
                 <TextInput
                     style={styles.inputStyle}
                     placeholder="Enter Password"
+                    color="#fff"
                     placeholderTextColor="#8b9cb5"
                 />
 
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={() => navigation.navigate('SignUpScreen2')}>
-                    <Text style={{ color: '#fff' }}>Sign Up</Text>
+                    <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen2')}>
-                    <Text style={{ textAlign: 'center', marginTop: 10 }}>
-                        Don’t have an account ?
-            <Text style={{ color: '#3C82FF' }}>Sign Up</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+                    <Text style={{ textAlign: 'center', marginTop: 10, color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+                        Already have an account ?
+            <Text style={{ color: '#3C82FF' }}>Sign In</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -69,7 +72,7 @@ export default SignUpScreen2;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#292930',
+        backgroundColor: 'black',
     },
 
     header: {

@@ -89,7 +89,7 @@ const SignInScreen8 = ({ navigation }) => {
                         style={styles.registerTextStyle}
                         onPress={() => navigation.navigate('SignUpScreen8')}>
                         New Here ?
-                        <Text style={{ color: '#50A8FE' }}>
+                        <Text style={{ color: '#50A8FE', fontSize: 18, fontWeight: 'bold' }}>
                             Register
                         </Text>
                     </Text>
@@ -151,7 +151,8 @@ const styles = StyleSheet.create({
     buttonTextStyle: {
         color: '#FFFFFF',
         paddingVertical: 10,
-        fontSize: 16,
+        fontSize: 18,
+        fontWeight: 'bold'
     },
     inputStyle: {
         flex: 1,

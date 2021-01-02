@@ -8,7 +8,8 @@ import {
     StatusBar,
     TextInput,
     ImageBackground,
-    Image
+    Image,
+    Dimensions
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -35,11 +36,11 @@ const SignUpScreen9 = ({ navigation }) => {
                     <View style={styles.buttonSection}>
 
                         <TouchableOpacity style={[styles.rightbutton, { backgroundColor: "#4CB8C4" }]} onPress={() => navigation.navigate('SignInScreen9')}>
-                            <Text style={{ color: '#fff' }}>SIGN IN</Text>
+                            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign In</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[styles.leftbutton, { backgroundColor: "#fff" }]} onPress={() => navigation.navigate('HomeScreen')}>
-                            <Text style={{ color: '#4CB8C4' }}>SIGN UP</Text>
+                            <Text style={{ color: '#4CB8C4', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
                         </TouchableOpacity>
                     </View>
                 </ImageBackground>
@@ -86,7 +87,7 @@ const SignUpScreen9 = ({ navigation }) => {
                 <View style={styles.buttonSection}>
                     <TouchableOpacity style={styles.signupButton} onPress={() => navigation.navigate('HomeScreen')}>
                         <LinearGradient colors={['#4CB8C4', '#3CD3AD']} style={styles.signupButton} >
-                            <Text style={{ color: '#fff' }}>PROCEED</Text>
+                            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Proceed</Text>
                             <MaterialIcons name="navigate-next" color="#fff" size={20} />
                         </LinearGradient>
                     </TouchableOpacity>
@@ -106,23 +107,22 @@ const styles = StyleSheet.create({
     },
 
     hederSection: {
-        flex: 1
+        flex: 1,
     },
 
     headerLogo: {
         alignSelf: 'center',
-        marginTop: 50
+        marginTop: 40
     },
 
     footerSection: {
-        marginTop: 50,
-        flex: 2,
+        flex: 3,
     },
 
     buttonSection: {
+        flex: 1,
         flexDirection: 'row',
         alignSelf: 'center',
-        marginTop: 60,
 
     },
 
@@ -131,13 +131,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderBottomStartRadius: 15,
         borderTopStartRadius: 15,
-        width: 120,
-        height: 50,
+        width: Dimensions.get('window').width / 3.2,
+        height: Dimensions.get('window').height / 13,
         shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
         shadowOpacity: 0.32,
         shadowRadius: 6,
         elevation: 10,
@@ -148,28 +144,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderBottomEndRadius: 15,
         borderTopEndRadius: 15,
-        width: 120,
-        height: 50,
+        width: Dimensions.get('window').width / 3.2,
+        height: Dimensions.get('window').height / 13,
         shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
         shadowOpacity: 0.32,
         shadowRadius: 6,
         elevation: 10,
-
     },
 
     cardStyle: {
-        height: 100,
-        width: 240,
+        width: Dimensions.get('window').width / 2.7,
+        height: Dimensions.get('window').height / 3,
         alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
     inputStyle: {
-        width: 240,
-        height: 50,
+        width: Dimensions.get('window').width / 1.6,
+        height: Dimensions.get('window').height / 13,
         borderWidth: 1,
         padding: 10,
         borderColor: '#E2E6EA',
@@ -179,7 +172,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignSelf: 'center',
         alignItems: 'center',
-        marginTop: 60,
     },
 
     checkboxlabel: {
@@ -187,11 +179,12 @@ const styles = StyleSheet.create({
     },
 
     signupButton: {
+        margin: 10,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        width: 240,
-        height: 50,
+        width: Dimensions.get('window').width / 1.6,
+        height: Dimensions.get('window').height / 13,
     },
 });

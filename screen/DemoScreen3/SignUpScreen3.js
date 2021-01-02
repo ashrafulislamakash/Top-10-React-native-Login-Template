@@ -46,7 +46,7 @@ const SignUpScreen3 = ({ navigation }) => {
                     <TextInput
                         placeholder="Your Password"
                         placeholderTextColor="#DEFE0A"
-                        style={styles.textInput} />
+                        style={[styles.textInput, { color: "#DEFE0A" }]} />
 
                     <TouchableOpacity>
                         <Feather name="eye-off" color="#DEFE0A" size={20} />
@@ -62,14 +62,14 @@ const SignUpScreen3 = ({ navigation }) => {
                 <View style={styles.button}>
                     <TouchableOpacity style={styles.signIn} onPress={() => navigation.navigate('HomeScreen')} >
                         <LinearGradient colors={['#DEFE0A', '#6F7F05']} style={styles.signIn} >
-                            <Text style={[styles.textSign, { color: '#fff' }]}>Sign Up</Text>
+                            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
                         </LinearGradient>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => navigation.navigate('SignInScreen3')}
                         style={[styles.signIn, { borderColor: '#DEFE0A', borderWidth: 1, marginTop: 15 }]}>
-                        <Text style={[styles.textSign, { color: '#DEFE0A' }]}>Sign In</Text>
+                        <Text style={{ color: '#DEFE0A', fontSize: 18, fontWeight: 'bold' }}>Sign In</Text>
                     </TouchableOpacity>
                 </View>
 

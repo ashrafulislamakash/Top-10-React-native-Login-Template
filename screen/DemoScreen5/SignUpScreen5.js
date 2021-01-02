@@ -61,11 +61,11 @@ const SignUpScreen5 = ({ navigation }) => {
 
                     </Card>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen4')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
                         <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-                            Dont Have an Account?
-                        <Text style={{ color: '#FF9F40' }}>
-                                Sign Up
+                            Alread Have an Account?
+                        <Text style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
+                                Sign In
                         </Text >
                         </Text>
                     </TouchableOpacity>

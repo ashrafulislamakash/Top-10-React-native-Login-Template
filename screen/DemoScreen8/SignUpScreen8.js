@@ -101,7 +101,7 @@ const SignUpScreen8 = ({ navigation }) => {
                         style={styles.registerTextStyle}
                         onPress={() => navigation.navigate('HomeScreen')}>
                         Existing User?
-                        <Text style={{ color: '#50A8FE' }}>
+                        <Text style={{ color: '#50A8FE', fontSize: 18, fontWeight: 'bold' }}>
                             SIGN IN
                         </Text>
                     </Text>
@@ -134,10 +134,6 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         shadowColor: "#000",
         backgroundColor: '#fff',
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
         shadowOpacity: 0.32,
         elevation: 6,
     },
@@ -152,10 +148,6 @@ const styles = StyleSheet.create({
         shadowColor: "#8300F5",
         justifyContent: 'center',
         backgroundColor: '#8300F5',
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
         shadowOpacity: 0.32,
         elevation: 6,
     },
@@ -163,7 +155,8 @@ const styles = StyleSheet.create({
     buttonTextStyle: {
         color: '#FFFFFF',
         paddingVertical: 10,
-        fontSize: 16,
+        fontSize: 18,
+        fontWeight: 'bold'
     },
     inputStyle: {
         flex: 1,

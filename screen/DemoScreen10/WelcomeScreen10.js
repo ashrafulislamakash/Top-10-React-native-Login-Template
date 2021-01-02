@@ -53,14 +53,14 @@ const WelcomeScreen10 = ({ navigation }) => {
           <TouchableOpacity
             style={styles.emailSignupButton}
             onPress={() => navigation.navigate('SignUpScreen10')}>
-            <Text style={{ fontSize: 20, color: '#fff' }}> Sign Up</Text>
+            <Text style={{ fontSize: 20, color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign Up</Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignInScreen10')}>
           <Text style={{ textAlign: 'center', marginTop: 30 }}>
             Already have an account ?
-            <Text style={{ color: '#3C82FF' }}>Login</Text>
+            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   },
 
   hederSection: {
-    flex: 1,
+    flex: 1.2,
   },
 
   headerText: {
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
 
   footerSection: {
-    flex: 1.5,
+    flex: 1,
   },
 
   buttonSection: {

@@ -34,6 +34,7 @@ const SignInScreen2 = ({ navigation }) => {
         <TextInput
           style={styles.inputStyle}
           placeholder="Enter Email"
+          color="#fff"
           placeholderTextColor="#8b9cb5"
           autoCapitalize="none"
         />
@@ -42,19 +43,20 @@ const SignInScreen2 = ({ navigation }) => {
           style={styles.inputStyle}
           placeholder="Enter Password"
           placeholderTextColor="#8b9cb5"
+          color="#fff"
         />
 
 
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{ color: '#fff' }}>LOGIN</Text>
+          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign In</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{ textAlign: 'center', marginTop: 10 }}>
+          <Text style={{ textAlign: 'center', marginTop: 10, color: '#fff' }}>
             Don’t have an account ?
-            <Text style={{ color: '#3C82FF' }}>Sign Up</Text>
+            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
@@ -67,11 +69,11 @@ export default SignInScreen2;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#292930',
+    backgroundColor: 'black',
   },
 
   header: {
-    flex: 1,
+    flex: 1.2,
   },
 
   logo: {

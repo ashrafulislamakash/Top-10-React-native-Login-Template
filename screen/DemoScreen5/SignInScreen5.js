@@ -61,7 +61,7 @@ const SignInScreen5 = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen5')}>
                         <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
                             Dont Have an Account?
-                        <Text style={{ color: '#FF9F40' }}>
+                        <Text style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
                                 Sign Up
                         </Text >
                         </Text>

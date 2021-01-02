@@ -49,7 +49,7 @@ const SignInScreen4 = ({ navigation }) => {
                             <View style={styles.button}>
                                 <TouchableOpacity style={styles.signIn}>
                                     <LinearGradient colors={['#FF9F40', '#E60CA5']} style={styles.signIn} >
-                                        <Text style={{ color: '#fff', fontSize: 20, }}>SIGN IN</Text>
+                                        <Text style={{ color: '#fff', fontSize: 20, fontSize: 18, fontWeight: 'bold' }}>Sign In</Text>
                                     </LinearGradient>
                                 </TouchableOpacity>
 
@@ -94,9 +94,9 @@ const SignInScreen4 = ({ navigation }) => {
                     <Animatable.View
                         animation="zoomInUp">
                         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen4')}>
-                            <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
+                            <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30, }}>
                                 Dont Have an Account?
-                        <Text style={{ color: '#FF9F40' }}>
+                        <Text style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
                                     Sign Up
                         </Text >
                             </Text>

@@ -56,7 +56,7 @@ const SignUpScreen4 = ({ navigation }) => {
                             <View style={styles.button}>
                                 <TouchableOpacity style={styles.signIn} >
                                     <LinearGradient colors={['#FF9F40', '#E60CA5']} style={styles.signIn} >
-                                        <Text style={{ color: '#fff', fontSize: 20, }}>SIGN UP</Text>
+                                        <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
                                     </LinearGradient>
                                 </TouchableOpacity>
 
@@ -100,10 +100,10 @@ const SignUpScreen4 = ({ navigation }) => {
 
                     <Animatable.View
                         animation="zoomInUp">
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} >
                             <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
                                 I've got an account already?
-                        <Text style={{ color: '#FF9F40' }}>
+                        <Text style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
                                     Sign In
                         </Text >
                             </Text>
