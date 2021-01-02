@@ -27,7 +27,7 @@ const SignInScreen10 = ({ navigation }) => {
       <View style={styles.hederSection}>
 
         <View style={styles.headerText}>
-          <Text style={{ fontSize: 30, color: '#3C82FF' }}> Login Now</Text>
+          <Text style={{ fontSize: 30, color: '#3C82FF', textAlign: 'center' }}> Login Now</Text>
           <Text> Please login to continue using our app.</Text>
         </View>
 
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
 
   hederSection: {
-    flex: 1.5,
+    flex: 1,
   },
 
   headerText: {
@@ -131,28 +131,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    minWidth: 150,
-    minHeight: 50,
-    width: Dimensions.get('window').width / 8,
+    width: Dimensions.get('window').width / 2.7,
     height: Dimensions.get('window').height / 13,
   },
 
   inputStyle: {
-    maxWidth: 345,
     width: Dimensions.get('window').width / 1.2,
     height: Dimensions.get('window').height / 13,
     padding: 10,
-    marginTop: 5,
     marginBottom: 5,
     alignSelf: 'center',
-    alignContent: 'center',
-    justifyContent: 'center',
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#E2E6EA',
   },
 
   checkboxContainer: {
+    width: Dimensions.get('window').width / 1.2,
     justifyContent: 'space-evenly',
     flexDirection: 'row',
     marginTop: 10,
@@ -174,8 +169,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
-    minWidth: 300,
-    minHeight: 50,
     width: Dimensions.get('window').width / 1.2,
     height: Dimensions.get('window').height / 13,
   },

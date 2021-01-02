@@ -7,7 +7,7 @@ import {
     Platform,
     StyleSheet,
     StatusBar,
-    Image
+    Dimensions
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
@@ -20,13 +20,13 @@ const SignInScreen3 = ({ navigation }) => {
             <StatusBar backgroundColor='#DEFE0A' barStyle="dark-content" />
 
             <View style={styles.header}>
-                {/* <Image
-                    source={require('../../assets/bg.png')} /> */}
 
                 <Text style={styles.text_header}>Welcome back!</Text>
             </View>
 
-            <View style={styles.footer}>
+
+            <Animatable.View style={styles.footer}
+                animation="fadeInUpBig">
 
                 <View style={styles.action}>
                     <FontAwesome name="user-o" color="#DEFE0A" size={20} />
@@ -40,7 +40,6 @@ const SignInScreen3 = ({ navigation }) => {
                     </View>
                 </View>
 
-
                 <View style={styles.action}>
                     <Feather name="lock" color="#DEFE0A" size={20} />
 
@@ -53,7 +52,6 @@ const SignInScreen3 = ({ navigation }) => {
                         <Feather name="eye-off" color="#DEFE0A" size={20} />
                     </TouchableOpacity>
                 </View>
-
 
                 <TouchableOpacity>
                     <Text style={{ color: '#DEFE0A', marginTop: 20 }}>
@@ -75,7 +73,7 @@ const SignInScreen3 = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
 
-            </View>
+            </Animatable.View>
         </View>
     );
 };
@@ -88,63 +86,60 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#343430'
     },
+
     header: {
         flex: 1,
-        justifyContent: 'flex-end',
-        paddingHorizontal: 20,
-        paddingBottom: 50
+        alignSelf: 'center',
+        justifyContent: 'center',
     },
+
     footer: {
-        flex: 3,
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        paddingHorizontal: 20,
-        paddingVertical: 30
+        flex: 2,
+        alignSelf: 'center',
+        width: Dimensions.get('window').width / 1.1,
+        height: Dimensions.get('window').height / 13,
+
     },
+
     text_header: {
         color: '#DEFE0A',
         fontWeight: 'bold',
         fontSize: 30
     },
+
     text_footer: {
         color: '#D506C0',
         fontSize: 18
     },
+
     action: {
         flexDirection: 'row',
-        marginTop: 40,
+        marginTop: 10,
         borderBottomWidth: 1,
         borderBottomColor: '#DEFE0A',
         paddingBottom: 5
     },
-    actionError: {
-        flexDirection: 'row',
-        marginTop: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#FF0000',
-        paddingBottom: 5
-    },
+
     textInput: {
         flex: 1,
         marginTop: Platform.OS === 'ios' ? 0 : -12,
         paddingLeft: 10,
         color: '#FB599B',
     },
-    errorMsg: {
-        color: '#D506C0',
-        fontSize: 14,
-    },
+
     button: {
         alignItems: 'center',
-        marginTop: 50
+        marginTop: 10,
     },
+
     signIn: {
-        width: '100%',
-        height: 50,
+        width: Dimensions.get('window').width / 1.1,
+        height: Dimensions.get('window').height / 15,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10
     },
+
     textSign: {
         fontSize: 18,
         fontWeight: 'bold'

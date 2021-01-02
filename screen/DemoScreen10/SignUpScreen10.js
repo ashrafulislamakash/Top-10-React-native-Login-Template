@@ -97,14 +97,13 @@ const styles = StyleSheet.create({
     },
 
     hederSection: {
-        flex: 1.5,
+        flex: 1,
     },
 
     headerText: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        alignSelf: 'center',
     },
 
     footerSection: {
@@ -121,23 +120,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        minWidth: 150,
-        minHeight: 50,
-        width: Dimensions.get('window').width / 8,
+        width: Dimensions.get('window').width / 2.7,
         height: Dimensions.get('window').height / 13,
     },
 
     inputStyle: {
-        maxWidth: 345,
-        maxHeight: 50,
         width: Dimensions.get('window').width / 1.2,
         height: Dimensions.get('window').height / 13,
         padding: 10,
-        marginTop: 10,
+        marginTop: 5,
         marginBottom: 5,
         alignSelf: 'center',
-        alignContent: 'center',
-        justifyContent: 'center',
         borderWidth: 1,
         borderRadius: 10,
         borderColor: '#E2E6EA',
@@ -165,8 +158,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        minWidth: 300,
-        minHeight: 50,
         width: Dimensions.get('window').width / 1.2,
         height: Dimensions.get('window').height / 13,
     },

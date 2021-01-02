@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
     StyleSheet,
@@ -7,101 +6,112 @@ import {
     Text,
     Image,
     TouchableOpacity,
-    StatusBar
+    StatusBar,
+    Dimensions
 } from 'react-native';
 
-
-
-
-const SignUpScreen2 = () => {
-
+const SignUpScreen2 = ({ navigation }) => {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#292930' }}>
-            <StatusBar barStyle="light-content" hidden={false} backgroundColor="#396AFC" translucent={true} />
-
-            <View style={{ alignItems: 'center' }}>
+        <View style={styles.container}>
+            <StatusBar
+                barStyle="light-content"
+                hidden={false}
+                backgroundColor="#396AFC"
+                translucent={true}
+            />
+            <View style={styles.header}>
                 <Image
                     source={require('../../assets/logo2.png')}
-                    style={{
-                        width: '100%',
-                        height: 200,
-                        resizeMode: 'contain',
-                        margin: 30,
-                    }}
+                    style={styles.logo}
                 />
             </View>
 
-            <View style={styles.SectionStyle}>
+            <View style={styles.footer}>
+
                 <TextInput
                     style={styles.inputStyle}
-                    placeholder="Enter Name"
+                    placeholder="Enter username"
                     placeholderTextColor="#8b9cb5"
-                    autoCapitalize="sentences"
+                    autoCapitalize="none"
                 />
-            </View>
-
-            <View style={styles.SectionStyle}>
                 <TextInput
                     style={styles.inputStyle}
                     placeholder="Enter Email"
                     placeholderTextColor="#8b9cb5"
+                    autoCapitalize="none"
                 />
-            </View>
 
-            <View style={styles.SectionStyle}>
                 <TextInput
                     style={styles.inputStyle}
-                    underlineColorAndroid="#f000"
-                    placeholder="Enter Address"
+                    placeholder="Enter Password"
                     placeholderTextColor="#8b9cb5"
-                    autoCapitalize="sentences"
                 />
+
+                <TouchableOpacity
+                    style={styles.buttonStyle}
+                    onPress={() => navigation.navigate('SignUpScreen2')}>
+                    <Text style={{ color: '#fff' }}>Sign Up</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen2')}>
+                    <Text style={{ textAlign: 'center', marginTop: 10 }}>
+                        Don’t have an account ?
+            <Text style={{ color: '#3C82FF' }}>Sign Up</Text>
+                    </Text>
+                </TouchableOpacity>
             </View>
 
-            <TouchableOpacity
-                style={styles.buttonStyle}>
-                <Text style={styles.buttonTextStyle}>REGISTER</Text>
-            </TouchableOpacity>
         </View>
     );
 };
-
 export default SignUpScreen2;
 
 const styles = StyleSheet.create({
-    SectionStyle: {
-        flexDirection: 'row',
-        height: 40,
-        marginTop: 20,
-        marginLeft: 35,
-        marginRight: 35,
-        margin: 10,
+    container: {
+        flex: 1,
+        backgroundColor: '#292930',
     },
+
+    header: {
+        flex: 1,
+    },
+
+    logo: {
+        resizeMode: 'contain',
+        alignSelf: 'center',
+        marginTop: 10,
+        width: Dimensions.get('window').width / 3,
+        height: Dimensions.get('window').height / 3,
+    },
+
+    footer: {
+        flex: 2,
+        alignItems: 'center',
+        alignContent: 'center',
+        alignSelf: 'center',
+    },
+
+    inputStyle: {
+        paddingLeft: 15,
+        borderWidth: 1,
+        borderRadius: 25,
+        margin: 10,
+        borderColor: '#dadae8',
+        width: Dimensions.get('window').width / 1.2,
+        height: Dimensions.get('window').height / 15,
+    },
+
     buttonStyle: {
         backgroundColor: '#396AFC',
-        borderWidth: 0,
-        color: '#FFFFFF',
         borderColor: '#7DE24E',
-        height: 40,
+        justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 30,
-        marginLeft: 35,
-        marginRight: 35,
-        marginTop: 20,
-        marginBottom: 20,
+        margin: 10,
+        borderRadius: 25,
+        width: Dimensions.get('window').width / 1.2,
+        height: Dimensions.get('window').height / 15,
     },
-    buttonTextStyle: {
-        color: '#FFFFFF',
-        paddingVertical: 10,
-        fontSize: 16,
-    },
-    inputStyle: {
-        flex: 1,
-        color: 'white',
-        paddingLeft: 15,
-        paddingRight: 15,
-        borderWidth: 1,
-        borderRadius: 30,
-        borderColor: '#dadae8',
-    },
+
+
 });
+

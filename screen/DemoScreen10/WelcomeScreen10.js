@@ -7,13 +7,12 @@ import {
   StatusBar,
   Image,
   Dimensions,
-  SafeAreaView,
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const WelcomeScreen10 = ({ navigation }) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -22,9 +21,8 @@ const WelcomeScreen10 = ({ navigation }) => {
       />
 
       <View style={styles.hederSection}>
-
         <View style={styles.headerText}>
-          <Text style={{ fontSize: 30, color: '#3C82FF' }}> Welcome</Text>
+          <Text style={{ fontSize: 30, color: '#3C82FF', textAlign: 'center' }}> Welcome</Text>
           <Text> Please login or sign up to continue using our app.</Text>
         </View>
         <Image
@@ -66,7 +64,8 @@ const WelcomeScreen10 = ({ navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </View>
+
   );
 };
 
@@ -78,23 +77,21 @@ const styles = StyleSheet.create({
   },
 
   hederSection: {
-    flex: 2,
+    flex: 1,
   },
 
   headerText: {
-    alignSelf: 'center',
+    marginTop: 60,
+    alignSelf: 'center'
   },
 
   headerlogo: {
     alignSelf: 'center',
     width: Dimensions.get('window').width / 2,
-    height: Dimensions.get('window').height / 2,
-    minWidth: 300,
-    minHeight: 200,
   },
 
   footerSection: {
-    flex: 2,
+    flex: 1.5,
   },
 
   buttonSection: {
@@ -107,9 +104,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    minWidth: 150,
-    minHeight: 50,
-    width: Dimensions.get('window').width / 8,
+    width: Dimensions.get('window').width / 2.6,
     height: Dimensions.get('window').height / 13,
   },
 
@@ -119,8 +114,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     margin: 10,
-    maxWidth: 300,
-    maxHeight: 50,
     width: Dimensions.get('window').width / 1.2,
     height: Dimensions.get('window').height / 13,
 

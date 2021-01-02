@@ -9,6 +9,7 @@ import {
     ImageBackground
 } from 'react-native';
 import { Card } from 'react-native-paper';
+import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
@@ -22,37 +23,40 @@ const SignInScreen5 = ({ navigation }) => {
                 style={styles.backgroundstyle}>
 
                 <View style={styles.mainBody}>
+                    <Animatable.View
+                        animation="bounceIn">
 
-                    <Card style={styles.cardStyle}>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Username"
-                                placeholderTextColor="#8b9cb5"
-                                autoCapitalize="none"
-                            />
-                        </View>
+                        <Card style={styles.cardStyle} >
+                            <View style={styles.SectionStyle}>
+                                <TextInput
+                                    style={styles.inputStyle}
+                                    placeholder="Username"
+                                    placeholderTextColor="#8b9cb5"
+                                    autoCapitalize="none"
+                                />
+                            </View>
 
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Password"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
+                            <View style={styles.SectionStyle}>
+                                <TextInput
+                                    style={styles.inputStyle}
+                                    placeholder="Password"
+                                    placeholderTextColor="#8b9cb5"
+                                />
+                            </View>
 
-                        <View style={styles.button}>
-                            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-                                <LinearGradient
-                                    colors={['#FF839D', '#F50B9A']}
-                                    style={styles.signIn} >
-                                    <MaterialIcons name="arrow-forward" color="#fff" size={20} />
-                                </LinearGradient>
-                            </TouchableOpacity>
+                            <View style={styles.button}>
+                                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+                                    <LinearGradient
+                                        colors={['#FF839D', '#F50B9A']}
+                                        style={styles.signIn} >
+                                        <MaterialIcons name="arrow-forward" color="#fff" size={20} />
+                                    </LinearGradient>
+                                </TouchableOpacity>
 
-                        </View>
+                            </View>
 
-                    </Card>
+                        </Card>
+                    </ Animatable.View>
 
                     <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen5')}>
                         <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>

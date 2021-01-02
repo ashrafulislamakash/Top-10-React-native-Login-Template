@@ -11,6 +11,7 @@ import {
 import { Card } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import * as Animatable from 'react-native-animatable';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const SignInScreen4 = ({ navigation }) => {
@@ -23,77 +24,87 @@ const SignInScreen4 = ({ navigation }) => {
                 style={styles.backgroundstyle}>
 
                 <View style={styles.mainBody}>
-                    <Card style={styles.cardStyle}>
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Username"
-                                placeholderTextColor="#8b9cb5"
-                                autoCapitalize="none"
-                            />
-                        </View>
 
-                        <View style={styles.SectionStyle}>
-                            <TextInput
-                                style={styles.inputStyle}
-                                placeholder="Password"
-                                placeholderTextColor="#8b9cb5"
-                            />
-                        </View>
+                    <Animatable.View
+                        animation="zoomIn">
 
-                        <View style={styles.button}>
-                            <TouchableOpacity style={styles.signIn} >
-                                <LinearGradient colors={['#FF9F40', '#E60CA5']} style={styles.signIn} >
-                                    <Text style={{ color: '#fff', fontSize: 20, }}>SIGN IN</Text>
-                                </LinearGradient>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity
-                                style={styles.signupTextStyle}>
-                                <Text style={{ color: '#8b9cb5' }}>Or Sign up with</Text>
-                            </TouchableOpacity>
-
-                            <View style={styles.iconViewStyle}>
-
-
-                                <View style={styles.iconStyle}>
-                                    <TouchableOpacity>
-                                        <LinearGradient colors={['#FF9F40', '#E60CA5']} >
-                                            <MaterialCommunityIcons name="facebook" color="#fff" size={30} />
-                                        </LinearGradient>
-                                    </TouchableOpacity>
-                                </View>
-
-                                <View style={styles.iconStyle}>
-                                    <TouchableOpacity>
-                                        <LinearGradient colors={['#FF9F40', '#E60CA5']} >
-                                            <AntDesign name="twitter" color="#fff" size={30} />
-                                        </LinearGradient>
-                                    </TouchableOpacity>
-                                </View>
-
-                                <View style={styles.iconStyle}>
-                                    <TouchableOpacity>
-                                        <LinearGradient colors={['#FF9F40', '#E60CA5']} >
-                                            <AntDesign name="google" color="#fff" size={30} />
-                                        </LinearGradient>
-                                    </TouchableOpacity>
-                                </View>
+                        <Card style={styles.cardStyle}>
+                            <View style={styles.SectionStyle}>
+                                <TextInput
+                                    style={styles.inputStyle}
+                                    placeholder="Username"
+                                    placeholderTextColor="#8b9cb5"
+                                    autoCapitalize="none"
+                                />
                             </View>
 
-                        </View>
-                    </Card>
-                    <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen4')}>
-                        <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-                            Dont Have an Account?
+                            <View style={styles.SectionStyle}>
+                                <TextInput
+                                    style={styles.inputStyle}
+                                    placeholder="Password"
+                                    placeholderTextColor="#8b9cb5"
+                                />
+                            </View>
+
+                            <View style={styles.button}>
+                                <TouchableOpacity style={styles.signIn}>
+                                    <LinearGradient colors={['#FF9F40', '#E60CA5']} style={styles.signIn} >
+                                        <Text style={{ color: '#fff', fontSize: 20, }}>SIGN IN</Text>
+                                    </LinearGradient>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.signupTextStyle}>
+                                    <Text style={{ color: '#8b9cb5' }}>Or Sign up with</Text>
+                                </TouchableOpacity>
+
+                                <View style={styles.iconViewStyle}>
+
+
+                                    <View style={styles.iconStyle}>
+                                        <TouchableOpacity>
+                                            <LinearGradient colors={['#FF9F40', '#E60CA5']} >
+                                                <MaterialCommunityIcons name="facebook" color="#fff" size={30} />
+                                            </LinearGradient>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={styles.iconStyle}>
+                                        <TouchableOpacity>
+                                            <LinearGradient colors={['#FF9F40', '#E60CA5']} >
+                                                <AntDesign name="twitter" color="#fff" size={30} />
+                                            </LinearGradient>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={styles.iconStyle}>
+                                        <TouchableOpacity>
+                                            <LinearGradient colors={['#FF9F40', '#E60CA5']} >
+                                                <AntDesign name="google" color="#fff" size={30} />
+                                            </LinearGradient>
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+
+                            </View>
+                        </Card>
+
+                    </Animatable.View>
+
+                    <Animatable.View
+                        animation="zoomInUp">
+                        <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen4')}>
+                            <Text style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
+                                Dont Have an Account?
                         <Text style={{ color: '#FF9F40' }}>
-                                Sign Up
+                                    Sign Up
                         </Text >
-                        </Text>
-                    </TouchableOpacity>
+                            </Text>
+                        </TouchableOpacity>
+                    </Animatable.View>
                 </View>
             </ImageBackground>
-        </View>
+        </View >
     );
 };
 
