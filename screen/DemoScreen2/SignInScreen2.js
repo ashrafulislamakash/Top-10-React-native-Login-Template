@@ -7,10 +7,10 @@ import {
   Image,
   TouchableOpacity,
   StatusBar,
-  Dimensions
+  Dimensions,
 } from 'react-native';
 
-const SignInScreen2 = ({ navigation }) => {
+const SignInScreen2 = ({navigation}) => {
   return (
     <View style={styles.container}>
       <StatusBar
@@ -21,14 +21,8 @@ const SignInScreen2 = ({ navigation }) => {
       />
 
       <View style={styles.header}>
-        <Image
-          source={require('../../assets/logo2.png')}
-          style={styles.logo}
-        />
+        <Image source={require('../../assets/logo2.png')} style={styles.logo} />
       </View>
-
-
-
 
       <View style={styles.footer}>
         <TextInput
@@ -46,21 +40,23 @@ const SignInScreen2 = ({ navigation }) => {
           color="#fff"
         />
 
-
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign In</Text>
+          <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+            Sign In
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{ textAlign: 'center', marginTop: 10, color: '#fff' }}>
+          <Text style={{textAlign: 'center', marginTop: 10, color: '#fff'}}>
             Don’t have an account ?
-            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
+            <Text style={{color: '#3C82FF', fontSize: 18, fontWeight: 'bold'}}>
+              Sign Up
+            </Text>
           </Text>
         </TouchableOpacity>
       </View>
-
     </View>
   );
 };
@@ -111,7 +107,4 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 1.2,
     height: Dimensions.get('window').height / 15,
   },
-
-
 });
-

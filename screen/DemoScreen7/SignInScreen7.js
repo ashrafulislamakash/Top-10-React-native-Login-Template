@@ -11,9 +11,9 @@ import {
   ImageBackground,
   Dimensions,
 } from 'react-native';
-import { Card } from 'react-native-paper';
+import {Card} from 'react-native-paper';
 
-const SignInScreen7 = ({ navigation }) => {
+const SignInScreen7 = ({navigation}) => {
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <StatusBar
@@ -46,7 +46,7 @@ const SignInScreen7 = ({ navigation }) => {
             returnKeyType={'done'}
             autoCorrect={false}
           />
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
 
           <TextInput
             style={styles.inputstyle}
@@ -58,18 +58,30 @@ const SignInScreen7 = ({ navigation }) => {
             autoCorrect={false}
           />
 
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
 
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('HomeScreen')}>
-            <Text style={{ fontSize: 20, color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign In</Text>
+            <Text
+              style={{
+                fontSize: 20,
+                color: '#fff',
+                fontSize: 18,
+                fontWeight: 'bold',
+              }}>
+              {' '}
+              Sign In
+            </Text>
           </TouchableOpacity>
         </Card>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen7')}>
-          <Text style={{ textAlign: 'center', marginTop: 60 }}>
-            Don’t have an account ?<Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
+          <Text style={{textAlign: 'center', marginTop: 60}}>
+            Don’t have an account ?
+            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+              Sign Up
+            </Text>
           </Text>
         </TouchableOpacity>
       </ImageBackground>
