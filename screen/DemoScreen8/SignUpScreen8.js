@@ -12,7 +12,7 @@ import {
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const SignUpScreen8 = ({navigation}) => {
+const SignUpScreen8 = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.continer}>
       <StatusBar
@@ -23,7 +23,7 @@ const SignUpScreen8 = ({navigation}) => {
       />
 
       <View>
-        <View style={{alignItems: 'center'}}>
+        <View style={{ alignItems: 'center' }}>
           <Image
             source={require('../../assets/logo8.png')}
             style={{
@@ -41,7 +41,7 @@ const SignUpScreen8 = ({navigation}) => {
         <View style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
-            placeholder="Enter Name"
+            placeholder="username"
             color="#8b9cb5"
             placeholderTextColor="#8b9cb5"
             autoCapitalize="none"
@@ -51,7 +51,7 @@ const SignUpScreen8 = ({navigation}) => {
         <View style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
-            placeholder="Enter Email"
+            placeholder="E-mail"
             placeholderTextColor="#8b9cb5"
             color="#8b9cb5"
             autoCapitalize="none"
@@ -61,7 +61,8 @@ const SignUpScreen8 = ({navigation}) => {
         <View style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
-            placeholder="Enter Password"
+            placeholder="Password"
+            secureTextEntry={true}
             color="#8b9cb5"
             placeholderTextColor="#8b9cb5"
           />
@@ -106,7 +107,7 @@ const SignUpScreen8 = ({navigation}) => {
             style={styles.registerTextStyle}
             onPress={() => navigation.navigate('HomeScreen')}>
             Existing User?
-            <Text style={{color: '#50A8FE', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#50A8FE', fontSize: 18, fontWeight: 'bold' }}>
               SIGN IN
             </Text>
           </Text>
@@ -163,7 +164,6 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,

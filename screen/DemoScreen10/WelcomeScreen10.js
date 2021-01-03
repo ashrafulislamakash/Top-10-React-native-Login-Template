@@ -7,12 +7,13 @@ import {
   StatusBar,
   Image,
   Dimensions,
+  SafeAreaView
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const WelcomeScreen10 = ({navigation}) => {
+const WelcomeScreen10 = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -22,7 +23,7 @@ const WelcomeScreen10 = ({navigation}) => {
 
       <View style={styles.hederSection}>
         <View style={styles.headerText}>
-          <Text style={{fontSize: 30, color: '#3C82FF', textAlign: 'center'}}>
+          <Text style={{ fontSize: 30, color: '#3C82FF', textAlign: 'center' }}>
             {' '}
             Welcome
           </Text>
@@ -36,21 +37,21 @@ const WelcomeScreen10 = ({navigation}) => {
       </View>
 
       <View style={styles.footerSection}>
-        <Text style={{textAlign: 'center'}}>Enter via social networks</Text>
+        <Text style={{ textAlign: 'center' }}>Enter via social networks</Text>
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: '#76A9EA'}]}>
+            style={[styles.button, { backgroundColor: '#76A9EA' }]}>
             <MaterialCommunityIcons name="facebook" color="#fff" size={35} />
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.button, {backgroundColor: '#475993'}]}>
+            style={[styles.button, { backgroundColor: '#475993' }]}>
             <MaterialCommunityIcons name="twitter" color="#fff" size={35} />
           </TouchableOpacity>
         </View>
 
-        <Text style={{textAlign: 'center'}}>or login with email</Text>
+        <Text style={{ textAlign: 'center' }}>or login with email</Text>
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
@@ -70,15 +71,15 @@ const WelcomeScreen10 = ({navigation}) => {
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignInScreen10')}>
-          <Text style={{textAlign: 'center', marginTop: 30}}>
+          <Text style={{ textAlign: 'center', marginTop: 30 }}>
             Already have an account ?
-            <Text style={{color: '#3C82FF', fontSize: 18, fontWeight: 'bold'}}>
-              Sign Up
+            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>
+              Sign In
             </Text>
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

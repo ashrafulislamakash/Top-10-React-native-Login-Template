@@ -10,6 +10,7 @@ import {
   ImageBackground,
   Image,
   Dimensions,
+  SafeAreaView
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -17,7 +18,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const SignInScreen9 = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -97,7 +98,7 @@ const SignInScreen9 = ({navigation}) => {
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -7,12 +7,14 @@ import {
   Image,
   TouchableOpacity,
   StatusBar,
+  SafeAreaView,
   Dimensions,
 } from 'react-native';
 
-const SignInScreen2 = ({navigation}) => {
+const SignInScreen2 = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -43,21 +45,21 @@ const SignInScreen2 = ({navigation}) => {
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
             Sign In
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{textAlign: 'center', marginTop: 10, color: '#fff'}}>
+          <Text style={{ textAlign: 'center', marginTop: 10, color: '#fff' }}>
             Don’t have an account ?
-            <Text style={{color: '#3C82FF', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>
               Sign Up
             </Text>
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 export default SignInScreen2;
@@ -73,9 +75,9 @@ const styles = StyleSheet.create({
   },
 
   logo: {
+    margin: 10,
     resizeMode: 'contain',
     alignSelf: 'center',
-    marginTop: 10,
     width: Dimensions.get('window').width / 3,
     height: Dimensions.get('window').height / 3,
   },

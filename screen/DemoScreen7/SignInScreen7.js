@@ -7,15 +7,15 @@ import {
   StyleSheet,
   StatusBar,
   Image,
-  KeyboardAvoidingView,
+  SafeAreaView,
   ImageBackground,
   Dimensions,
 } from 'react-native';
-import {Card} from 'react-native-paper';
+import { Card } from 'react-native-paper';
 
-const SignInScreen7 = ({navigation}) => {
+const SignInScreen7 = ({ navigation }) => {
   return (
-    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+    <SafeAreaView behavior="padding" style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -46,7 +46,7 @@ const SignInScreen7 = ({navigation}) => {
             returnKeyType={'done'}
             autoCorrect={false}
           />
-          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
+          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
           <TextInput
             style={styles.inputstyle}
@@ -58,7 +58,7 @@ const SignInScreen7 = ({navigation}) => {
             autoCorrect={false}
           />
 
-          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
+          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
           <TouchableOpacity
             style={styles.button}
@@ -77,15 +77,15 @@ const SignInScreen7 = ({navigation}) => {
         </Card>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen7')}>
-          <Text style={{textAlign: 'center', marginTop: 60}}>
+          <Text style={{ textAlign: 'center', marginTop: 60 }}>
             Don’t have an account ?
-            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
               Sign Up
             </Text>
           </Text>
         </TouchableOpacity>
       </ImageBackground>
-    </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 };
 

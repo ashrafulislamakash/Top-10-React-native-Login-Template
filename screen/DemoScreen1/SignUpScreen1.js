@@ -7,15 +7,16 @@ import {
   Platform,
   StyleSheet,
   StatusBar,
+  SafeAreaView
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
-const SignUpScreen1 = ({navigation}) => {
+const SignUpScreen1 = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#D506C0" barStyle="light-content" />
 
       <View style={styles.header}>
@@ -37,7 +38,7 @@ const SignUpScreen1 = ({navigation}) => {
           </Animatable.View>
         </View>
 
-        <Text style={[styles.text_footer, {marginTop: 10}]}>Password</Text>
+        <Text style={[styles.text_footer, { marginTop: 10 }]}>Password</Text>
 
         <View style={styles.action}>
           <Feather name="lock" color="#D506C0" size={20} />
@@ -53,7 +54,7 @@ const SignUpScreen1 = ({navigation}) => {
           </TouchableOpacity>
         </View>
 
-        <Text style={[styles.text_footer, {marginTop: 35}]}>
+        <Text style={[styles.text_footer, { marginTop: 35 }]}>
           Confirm Password
         </Text>
 
@@ -76,11 +77,11 @@ const SignUpScreen1 = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.navigate('HomeScreen')}
             style={styles.signIn}
-            onPress={() => {}}>
+            onPress={() => { }}>
             <LinearGradient
               colors={['#FF839D', '#F50B9A']}
               style={styles.signIn}>
-              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+              <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
                 Sign Up
               </Text>
             </LinearGradient>
@@ -99,14 +100,14 @@ const SignUpScreen1 = ({navigation}) => {
             <Text
               style={[
                 styles.textSign,
-                {color: '#D506C0', fontSize: 18, fontWeight: 'bold'},
+                { color: '#D506C0', fontSize: 18, fontWeight: 'bold' },
               ]}>
               Sign In
             </Text>
           </TouchableOpacity>
         </View>
       </Animatable.View>
-    </View>
+    </SafeAreaView>
   );
 };
 

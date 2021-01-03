@@ -8,6 +8,7 @@ import {
   StyleSheet,
   StatusBar,
   Dimensions,
+  SafeAreaView
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
@@ -16,7 +17,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 const SignUpScreen3 = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#DEFE0A" barStyle="dark-content" />
 
       <View style={styles.header}>
@@ -82,7 +83,7 @@ const SignUpScreen3 = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </Animatable.View>
-    </View>
+    </SafeAreaView>
   );
 };
 

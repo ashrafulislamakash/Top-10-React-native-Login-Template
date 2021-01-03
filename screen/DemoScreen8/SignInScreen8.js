@@ -12,7 +12,7 @@ import {
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const SignInScreen8 = ({navigation}) => {
+const SignInScreen8 = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.continer}>
       <StatusBar
@@ -23,7 +23,7 @@ const SignInScreen8 = ({navigation}) => {
       />
 
       <View>
-        <View style={{alignItems: 'center'}}>
+        <View style={{ alignItems: 'center' }}>
           <Image
             source={require('../../assets/logo8.png')}
             style={{
@@ -41,7 +41,7 @@ const SignInScreen8 = ({navigation}) => {
         <View style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
-            placeholder="Enter Email"
+            placeholder="E-mail"
             placeholderTextColor="#8b9cb5"
             autoCapitalize="none"
           />
@@ -50,7 +50,8 @@ const SignInScreen8 = ({navigation}) => {
         <View style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
-            placeholder="Enter Password"
+            placeholder="Password"
+            secureTextEntry={true}
             placeholderTextColor="#8b9cb5"
           />
         </View>
@@ -94,7 +95,7 @@ const SignInScreen8 = ({navigation}) => {
             style={styles.registerTextStyle}
             onPress={() => navigation.navigate('SignUpScreen8')}>
             New Here ?
-            <Text style={{color: '#50A8FE', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#50A8FE', fontSize: 18, fontWeight: 'bold' }}>
               Register
             </Text>
           </Text>
@@ -125,10 +126,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     shadowColor: '#000',
     backgroundColor: '#fff',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
     shadowOpacity: 0.32,
     elevation: 6,
   },
@@ -143,10 +140,6 @@ const styles = StyleSheet.create({
     shadowColor: '#8300F5',
     justifyContent: 'center',
     backgroundColor: '#8300F5',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
     shadowOpacity: 0.32,
     elevation: 6,
   },
@@ -159,7 +152,6 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,

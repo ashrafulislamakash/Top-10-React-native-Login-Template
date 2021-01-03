@@ -8,11 +8,12 @@ import {
   TouchableOpacity,
   StatusBar,
   Dimensions,
+  SafeAreaView
 } from 'react-native';
 
 const SignUpScreen2 = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -68,7 +69,7 @@ const SignUpScreen2 = ({navigation}) => {
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 export default SignUpScreen2;

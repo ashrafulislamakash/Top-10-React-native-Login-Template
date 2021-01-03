@@ -6,7 +6,7 @@ import {
   TextInput,
   Platform,
   StyleSheet,
-  KeyboardAvoidingView,
+  SafeAreaView,
   StatusBar,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
@@ -14,9 +14,9 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
-const SignInScreen1 = ({navigation}) => {
+const SignInScreen1 = ({ navigation }) => {
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#D506C0" barStyle="light-content" />
 
       <View style={styles.header}>
@@ -25,8 +25,8 @@ const SignInScreen1 = ({navigation}) => {
 
       <Animatable.View
         animation="fadeInUpBig"
-        style={[styles.footer, {backgroundColor: '#fff'}]}>
-        <Text style={[styles.text_footer, {color: '#D506C0'}]}>Username</Text>
+        style={[styles.footer, { backgroundColor: '#fff' }]}>
+        <Text style={[styles.text_footer, { color: '#D506C0' }]}>Username</Text>
 
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#FB599B" size={20} />
@@ -34,7 +34,7 @@ const SignInScreen1 = ({navigation}) => {
           <TextInput
             placeholder="Your Username"
             placeholderTextColor="#FB599B"
-            style={[styles.textInput, {color: '#FB599B'}]}
+            style={[styles.textInput, { color: '#FB599B' }]}
           />
 
           <Animatable.View animation="bounceIn">
@@ -46,7 +46,7 @@ const SignInScreen1 = ({navigation}) => {
           animation="fadeInLeft"
           duration={500}></Animatable.View>
 
-        <Text style={[styles.text_footer, {color: '#D506C0', marginTop: 35}]}>
+        <Text style={[styles.text_footer, { color: '#D506C0', marginTop: 35 }]}>
           Password
         </Text>
 
@@ -55,19 +55,21 @@ const SignInScreen1 = ({navigation}) => {
           <TextInput
             placeholder="Your Password"
             placeholderTextColor="#FB599B"
-            style={[styles.textInput, {color: '#FB599B'}]}
+            style={[styles.textInput, { color: '#FB599B' }]}
           />
           <TouchableOpacity>
             <Feather name="eye-off" color="#FB599B" size={20} />
           </TouchableOpacity>
         </View>
 
+
+
         <Animatable.View
           animation="fadeInLeft"
           duration={500}></Animatable.View>
 
         <TouchableOpacity>
-          <Text style={{color: '#FB599B', marginTop: 10}}>
+          <Text style={{ color: '#FB599B', marginTop: 10 }}>
             Forgot password?
           </Text>
         </TouchableOpacity>
@@ -79,7 +81,7 @@ const SignInScreen1 = ({navigation}) => {
             <LinearGradient
               colors={['#FF839D', '#F50B9A']}
               style={styles.signIn}>
-              <Text style={{fontSize: 18, fontWeight: 'bold', color: '#fff'}}>
+              <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#fff' }}>
                 Sign In
               </Text>
             </LinearGradient>
@@ -89,15 +91,16 @@ const SignInScreen1 = ({navigation}) => {
             onPress={() => navigation.navigate('SignUpScreen1')}
             style={[
               styles.signIn,
-              {borderColor: '#D506C0', borderWidth: 1, marginTop: 15},
+              { borderColor: '#D506C0', borderWidth: 1, marginTop: 15 },
             ]}>
-            <Text style={{color: '#D506C0', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#D506C0', fontSize: 18, fontWeight: 'bold' }}>
               Sign Up
             </Text>
           </TouchableOpacity>
         </View>
       </Animatable.View>
-    </KeyboardAvoidingView>
+
+    </SafeAreaView>
   );
 };
 

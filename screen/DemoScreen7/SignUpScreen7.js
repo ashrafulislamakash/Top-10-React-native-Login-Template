@@ -7,15 +7,15 @@ import {
   StyleSheet,
   StatusBar,
   Image,
-  KeyboardAvoidingView,
+  SafeAreaView,
   ImageBackground,
   Dimensions,
 } from 'react-native';
-import {Card} from 'react-native-paper';
+import { Card } from 'react-native-paper';
 
-const SignUpScreen7 = ({navigation}) => {
+const SignUpScreen7 = ({ navigation }) => {
   return (
-    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+    <SafeAreaView behavior="padding" style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -46,17 +46,16 @@ const SignUpScreen7 = ({navigation}) => {
             returnKeyType={'done'}
             autoCorrect={false}
           />
-          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
+          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
           <TextInput
             style={styles.inputstyle}
-            secureTextEntry={true}
             placeholder="E-mail"
             returnKeyType={'done'}
             autoCapitalize={'none'}
             autoCorrect={false}
           />
-          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
+          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
           <TextInput
             style={styles.inputstyle}
             secureTextEntry={true}
@@ -66,7 +65,7 @@ const SignUpScreen7 = ({navigation}) => {
             autoCapitalize={'none'}
             autoCorrect={false}
           />
-          <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
+          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
           <TouchableOpacity
             style={styles.button}
@@ -85,15 +84,15 @@ const SignUpScreen7 = ({navigation}) => {
         </Card>
 
         <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-          <Text style={{textAlign: 'center', marginTop: 60}}>
+          <Text style={{ textAlign: 'center', marginTop: 60 }}>
             Already have an account ?
-            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
               Sign In
             </Text>
           </Text>
         </TouchableOpacity>
       </ImageBackground>
-    </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 };
 

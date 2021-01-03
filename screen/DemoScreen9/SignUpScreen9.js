@@ -10,6 +10,7 @@ import {
   ImageBackground,
   Image,
   Dimensions,
+  SafeAreaView
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -20,7 +21,7 @@ const SignUpScreen9 = ({navigation}) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -108,7 +109,7 @@ const SignUpScreen9 = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

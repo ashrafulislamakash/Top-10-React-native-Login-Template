@@ -6,6 +6,7 @@ import {
   TextInput,
   StyleSheet,
   StatusBar,
+  SafeAreaView
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
@@ -14,10 +15,10 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const SignUpScreen6 = ({navigation}) => {
+const SignUpScreen6 = ({ navigation }) => {
   return (
     <LinearGradient style={styles.container} colors={['#8E24AA', '#311B92']}>
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <StatusBar
           barStyle="light-content"
           hidden={false}
@@ -33,9 +34,9 @@ const SignUpScreen6 = ({navigation}) => {
             <FontAwesome name="user-o" color="#fff" size={20} />
 
             <TextInput
-              placeholder="Your Username"
+              placeholder="Username"
               placeholderTextColor="#fff"
-              style={[styles.textInput, {color: '#fff'}]}
+              style={[styles.textInput, { color: '#fff' }]}
             />
           </View>
 
@@ -46,18 +47,19 @@ const SignUpScreen6 = ({navigation}) => {
           <View style={styles.action}>
             <Feather name="lock" color="#fff" size={20} />
             <TextInput
-              placeholder="Your Email"
+              placeholder="E-mail"
               placeholderTextColor="#fff"
-              style={[styles.textInput, {color: '#fff'}]}
+              style={[styles.textInput, { color: '#fff' }]}
             />
           </View>
 
           <View style={styles.action}>
             <Feather name="lock" color="#fff" size={20} />
             <TextInput
-              placeholder="Your Password"
+              placeholder="Password"
               placeholderTextColor="#fff"
-              style={[styles.textInput, {color: '#fff'}]}
+              secureTextEntry={true}
+              style={[styles.textInput, { color: '#fff' }]}
             />
           </View>
 
@@ -70,7 +72,7 @@ const SignUpScreen6 = ({navigation}) => {
             duration={500}></Animatable.View>
 
           <TouchableOpacity>
-            <Text style={{color: '#fff', marginTop: 10}}>Forgot password?</Text>
+            <Text style={{ color: '#fff', marginTop: 10 }}>Forgot password?</Text>
           </TouchableOpacity>
 
           <View style={styles.button}>
@@ -80,32 +82,32 @@ const SignUpScreen6 = ({navigation}) => {
               <LinearGradient
                 colors={['#8E24AA', '#311B92']}
                 style={styles.signIn}>
-                <Text style={[styles.textSign, {color: '#fff'}]}>Sign Up</Text>
+                <Text style={[styles.textSign, { color: '#fff' }]}>Sign Up</Text>
               </LinearGradient>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-              <Text style={{textAlign: 'center', color: '#fff', marginTop: 10}}>
+              <Text style={{ textAlign: 'center', color: '#fff', marginTop: 10 }}>
                 Already have an account ?
-                <Text style={{color: '#55ACEE', paddingLeft: 10, fontSize: 18}}>
+                <Text style={{ color: '#55ACEE', paddingLeft: 10, fontSize: 18 }}>
                   Sign In
                 </Text>
               </Text>
             </TouchableOpacity>
 
             <View
-              style={{flexDirection: 'row', alignItems: 'center', margin: 10}}>
-              <View style={{flex: 1, height: 1, backgroundColor: '#fff'}} />
+              style={{ flexDirection: 'row', alignItems: 'center', margin: 10 }}>
+              <View style={{ flex: 1, height: 1, backgroundColor: '#fff' }} />
               <View>
-                <Text style={{width: 50, textAlign: 'center', color: '#fff'}}>
+                <Text style={{ width: 50, textAlign: 'center', color: '#fff' }}>
                   Or
                 </Text>
               </View>
-              <View style={{flex: 1, height: 1, backgroundColor: '#fff'}} />
+              <View style={{ flex: 1, height: 1, backgroundColor: '#fff' }} />
             </View>
 
             <TouchableOpacity>
-              <Text style={{textAlign: 'center', color: '#fff', marginTop: 10}}>
+              <Text style={{ textAlign: 'center', color: '#fff', marginTop: 10 }}>
                 Sign up with Social Networks
               </Text>
             </TouchableOpacity>
@@ -113,22 +115,22 @@ const SignUpScreen6 = ({navigation}) => {
 
           <View style={styles.iconViewStyle}>
             <TouchableOpacity
-              style={[styles.icon, {backgroundColor: '#164CBD'}]}>
+              style={[styles.icon, { backgroundColor: '#164CBD' }]}>
               <MaterialCommunityIcons name="facebook" color="#fff" size={25} />
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.icon, {backgroundColor: '#55ACEE'}]}>
+              style={[styles.icon, { backgroundColor: '#55ACEE' }]}>
               <AntDesign name="twitter" color="#fff" size={25} />
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.icon, {backgroundColor: '#DD4B39'}]}>
+              style={[styles.icon, { backgroundColor: '#DD4B39' }]}>
               <AntDesign name="google" color="#fff" size={25} />
             </TouchableOpacity>
           </View>
         </Animatable.View>
-      </View>
+      </SafeAreaView>
     </LinearGradient>
   );
 };

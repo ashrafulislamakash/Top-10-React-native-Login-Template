@@ -7,14 +7,15 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
+  SafeAreaView
 } from 'react-native';
-import {Card} from 'react-native-paper';
+import { Card } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const SignUpScreen5 = ({navigation}) => {
+const SignUpScreen5 = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -46,6 +47,7 @@ const SignUpScreen5 = ({navigation}) => {
               <TextInput
                 style={styles.inputStyle}
                 placeholder="Password"
+                secureTextEntry={true}
                 placeholderTextColor="#8b9cb5"
               />
             </View>
@@ -64,17 +66,17 @@ const SignUpScreen5 = ({navigation}) => {
 
           <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
             <Text
-              style={{color: '#8b9cb5', textAlign: 'center', marginTop: 30}}>
+              style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
               Alread Have an Account?
               <Text
-                style={{color: '#FF9F40', fontSize: 18, fontWeight: 'bold'}}>
+                style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
                 Sign In
               </Text>
             </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -107,10 +109,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 150,
     shadowColor: '#000',
-    shadowOffset: {
-      width: -5,
-      height: 5,
-    },
     shadowOpacity: 0.32,
     shadowRadius: 4.46,
     elevation: 5,
@@ -129,7 +127,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignContent: 'center',
     justifyContent: 'center',
-    color: 'white',
     borderWidth: 1,
     borderRadius: 20,
     borderColor: '#8b9cb5',

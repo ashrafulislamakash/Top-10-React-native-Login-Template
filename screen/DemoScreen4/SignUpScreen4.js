@@ -7,17 +7,18 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
+  SafeAreaView
 } from 'react-native';
-import {Card} from 'react-native-paper';
+import { Card } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import * as Animatable from 'react-native-animatable';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const SignUpScreen4 = ({navigation}) => {
+const SignUpScreen4 = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
         hidden={false}
@@ -43,6 +44,7 @@ const SignUpScreen4 = ({navigation}) => {
                 <TextInput
                   style={styles.inputStyle}
                   placeholder="Password"
+                  secureTextEntry={true}
                   placeholderTextColor="#8b9cb5"
                 />
               </View>
@@ -50,6 +52,7 @@ const SignUpScreen4 = ({navigation}) => {
                 <TextInput
                   style={styles.inputStyle}
                   placeholder="Confirm Password"
+                  secureTextEntry={true}
                   placeholderTextColor="#8b9cb5"
                 />
               </View>
@@ -60,14 +63,14 @@ const SignUpScreen4 = ({navigation}) => {
                     colors={['#FF9F40', '#E60CA5']}
                     style={styles.signIn}>
                     <Text
-                      style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+                      style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
                       Sign Up
                     </Text>
                   </LinearGradient>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.signupTextStyle}>
-                  <Text style={{color: '#8b9cb5'}}>Or Sign up with</Text>
+                  <Text style={{ color: '#8b9cb5' }}>Or Sign up with</Text>
                 </TouchableOpacity>
 
                 <View style={styles.iconViewStyle}>
@@ -106,10 +109,10 @@ const SignUpScreen4 = ({navigation}) => {
           <Animatable.View animation="zoomInUp">
             <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
               <Text
-                style={{color: '#8b9cb5', textAlign: 'center', marginTop: 30}}>
+                style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
                 I've got an account already?
                 <Text
-                  style={{color: '#FF9F40', fontSize: 18, fontWeight: 'bold'}}>
+                  style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
                   Sign In
                 </Text>
               </Text>
@@ -117,7 +120,7 @@ const SignUpScreen4 = ({navigation}) => {
           </Animatable.View>
         </View>
       </ImageBackground>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -148,10 +151,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 25,
     shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
     elevation: 6,
@@ -170,7 +169,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     alignContent: 'center',
     justifyContent: 'center',
-    color: 'white',
     borderWidth: 1,
     borderRadius: 25,
     borderColor: '#8b9cb5',

@@ -7,7 +7,8 @@ import {
     StyleSheet,
     StatusBar,
     TextInput,
-    Dimensions
+    Dimensions,
+    SafeAreaView
 } from 'react-native';
 
 import CheckBox from '@react-native-community/checkbox'
@@ -18,7 +19,7 @@ const SignUpScreen10 = ({ navigation }) => {
     const [isSelected, setSelection] = useState(false);
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" hidden={false} backgroundColor="#3C82FF" translucent={true} />
             <View style={styles.hederSection}>
                 <View style={styles.headerText}>
@@ -84,7 +85,7 @@ const SignUpScreen10 = ({ navigation }) => {
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
 
     );
 };
