@@ -23,10 +23,10 @@ const HomeScreen = (navigation) => {
       initialRouteName="SignInScreen1"
       barStyle={{backgroundColor: '#D506C0'}}>
       <Tab.Screen
-        name="Theme1"
+        name="Demo1"
         component={SignInScreen1}
         options={{
-          tabBarLabel: 'Theme1',
+          tabBarLabel: 'Demo1',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
@@ -34,10 +34,10 @@ const HomeScreen = (navigation) => {
       />
 
       <Tab.Screen
-        name="Theme2"
+        name="Demo2"
         component={SignInScreen2}
         options={{
-          tabBarLabel: 'Theme2',
+          tabBarLabel: 'Demo2',
           tabBarColor: '#396AFC',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -46,10 +46,10 @@ const HomeScreen = (navigation) => {
       />
 
       <Tab.Screen
-        name="Theme3"
+        name="Demo3"
         component={SignInScreen3}
         options={{
-          tabBarLabel: 'Theme3',
+          tabBarLabel: 'Demo3',
           tabBarColor: '#DEFE0A',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -58,10 +58,10 @@ const HomeScreen = (navigation) => {
       />
 
       <Tab.Screen
-        name="Theme4"
+        name="Demo4"
         component={SignInScreen4}
         options={{
-          tabBarLabel: 'Theme4',
+          tabBarLabel: 'Demo4',
           tabBarColor: '#E60CA5',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -70,10 +70,10 @@ const HomeScreen = (navigation) => {
       />
 
       <Tab.Screen
-        name="Theme5"
+        name="Demo5"
         component={SignInScreen5}
         options={{
-          tabBarLabel: 'Theme5',
+          tabBarLabel: 'Demo5',
           tabBarColor: '#00701a',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -82,10 +82,10 @@ const HomeScreen = (navigation) => {
       />
 
       <Tab.Screen
-        name="Theme6"
+        name="Demo6"
         component={SignInScreen6}
         options={{
-          tabBarLabel: 'Theme6',
+          tabBarLabel: 'Demo6',
           tabBarColor: '#8E24AA',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -93,10 +93,10 @@ const HomeScreen = (navigation) => {
         }}
       />
       <Tab.Screen
-        name="Theme7"
+        name="Demo7"
         component={SignInScreen7}
         options={{
-          tabBarLabel: 'Theme7',
+          tabBarLabel: 'Demo7',
           tabBarColor: '#00701a',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -104,10 +104,10 @@ const HomeScreen = (navigation) => {
         }}
       />
       <Tab.Screen
-        name="Theme8"
+        name="Demo8"
         component={SignInScreen8}
         options={{
-          tabBarLabel: 'Theme8',
+          tabBarLabel: 'Demo8',
           tabBarColor: '#8300F5',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -115,10 +115,10 @@ const HomeScreen = (navigation) => {
         }}
       />
       <Tab.Screen
-        name="Theme9"
+        name="Demo9"
         component={SignInScreen9}
         options={{
-          tabBarLabel: 'Theme9',
+          tabBarLabel: 'Demo9',
           tabBarColor: '#00701a',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
@@ -126,10 +126,10 @@ const HomeScreen = (navigation) => {
         }}
       />
       <Tab.Screen
-        name="Theme10"
+        name="Demo10"
         component={WelcomeScreen10}
         options={{
-          tabBarLabel: 'Theme10',
+          tabBarLabel: 'Demo10',
           tabBarColor: '#3C82FF',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />

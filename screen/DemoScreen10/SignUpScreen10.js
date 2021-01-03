@@ -10,7 +10,7 @@ import {
     Dimensions,
     SafeAreaView
 } from 'react-native';
-
+import * as Animatable from 'react-native-animatable';
 import CheckBox from '@react-native-community/checkbox'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -21,7 +21,8 @@ const SignUpScreen10 = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" hidden={false} backgroundColor="#3C82FF" translucent={true} />
-            <View style={styles.hederSection}>
+
+            <Animatable.View animation="fadeInDownBig" style={styles.hederSection}>
                 <View style={styles.headerText}>
                     <Text style={{ fontSize: 30, color: '#3C82FF' }}> Sign Up</Text>
                     <Text> Please sign up to enter in a app.</Text>
@@ -35,9 +36,9 @@ const SignUpScreen10 = ({ navigation }) => {
                         <MaterialCommunityIcons name="twitter" color="#fff" size={35} />
                     </TouchableOpacity>
                 </View>
-            </View>
+            </Animatable.View>
 
-            <View style={styles.footerSection}>
+            <Animatable.View animation="fadeInUpBig" style={styles.footerSection}>
                 <View>
                     <TextInput
                         style={styles.inputStyle}
@@ -76,7 +77,7 @@ const SignUpScreen10 = ({ navigation }) => {
                         <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign In</Text>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('SignInScreen10')}>
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
                     <Text style={{ textAlign: 'center', marginTop: 30 }}>
                         Already have an account ?
                         <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>
@@ -84,7 +85,7 @@ const SignUpScreen10 = ({ navigation }) => {
                         </Text >
                     </Text>
                 </TouchableOpacity>
-            </View>
+            </Animatable.View>
         </SafeAreaView>
 
     );

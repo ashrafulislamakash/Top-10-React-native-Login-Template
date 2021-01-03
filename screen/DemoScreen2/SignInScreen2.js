@@ -10,10 +10,10 @@ import {
   SafeAreaView,
   Dimensions,
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 const SignInScreen2 = ({ navigation }) => {
   return (
-
     <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle="light-content"
@@ -23,13 +23,15 @@ const SignInScreen2 = ({ navigation }) => {
       />
 
       <View style={styles.header}>
-        <Image source={require('../../assets/logo2.png')} style={styles.logo} />
+        <Animatable.Image
+          animation="bounceIn"
+          duraton="1500" source={require('../../assets/logo2.png')} style={styles.logo} />
       </View>
 
-      <View style={styles.footer}>
+      <Animatable.View animation="fadeInUpBig" style={styles.footer}>
         <TextInput
           style={styles.inputStyle}
-          placeholder="Enter Email"
+          placeholder="E-mail"
           color="#fff"
           placeholderTextColor="#8b9cb5"
           autoCapitalize="none"
@@ -37,7 +39,7 @@ const SignInScreen2 = ({ navigation }) => {
 
         <TextInput
           style={styles.inputStyle}
-          placeholder="Enter Password"
+          placeholder="Password"
           placeholderTextColor="#8b9cb5"
           color="#fff"
         />
@@ -58,7 +60,7 @@ const SignInScreen2 = ({ navigation }) => {
             </Text>
           </Text>
         </TouchableOpacity>
-      </View>
+      </Animatable.View>
     </SafeAreaView>
   );
 };
@@ -75,7 +77,6 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    margin: 10,
     resizeMode: 'contain',
     alignSelf: 'center',
     width: Dimensions.get('window').width / 3,

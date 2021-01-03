@@ -11,6 +11,7 @@ import {
   ImageBackground,
   Dimensions,
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import { Card } from 'react-native-paper';
 
 const SignUpScreen7 = ({ navigation }) => {
@@ -29,60 +30,62 @@ const SignUpScreen7 = ({ navigation }) => {
           height: '100%',
           resizeMode: 'cover',
         }}>
-        <Image
+        <Animatable.Image
+          animation="flipInY"
+          duraton="1500"
           source={require('../../assets/logo.png')}
           style={{
             width: Dimensions.get('window').width / 3,
             width: Dimensions.get('window').width / 3,
             alignSelf: 'center',
             resizeMode: 'contain',
-          }}></Image>
+          }} />
 
-        <Card style={styles.cardStyle}>
-          <TextInput
-            style={styles.inputstyle}
-            placeholder="Username"
-            autoCapitalize={'none'}
-            returnKeyType={'done'}
-            autoCorrect={false}
-          />
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+        <Animatable.View animation="flipInY">
+          <Card style={styles.cardStyle}>
+            <TextInput
+              style={styles.inputstyle}
+              placeholder="Username"
+              autoCapitalize={'none'}
+              returnKeyType={'done'}
+              autoCorrect={false}
+            />
+            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
-          <TextInput
-            style={styles.inputstyle}
-            placeholder="E-mail"
-            returnKeyType={'done'}
-            autoCapitalize={'none'}
-            autoCorrect={false}
-          />
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
-          <TextInput
-            style={styles.inputstyle}
-            secureTextEntry={true}
-            placeholder="Password"
-            returnKeyType={'done'}
-            secureTextEntry={true}
-            autoCapitalize={'none'}
-            autoCorrect={false}
-          />
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <TextInput
+              style={styles.inputstyle}
+              placeholder="E-mail"
+              returnKeyType={'done'}
+              autoCapitalize={'none'}
+              autoCorrect={false}
+            />
+            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <TextInput
+              style={styles.inputstyle}
+              secureTextEntry={true}
+              placeholder="Password"
+              returnKeyType={'done'}
+              secureTextEntry={true}
+              autoCapitalize={'none'}
+              autoCorrect={false}
+            />
+            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('SignUpScreen7')}>
-            <Text
-              style={{
-                fontSize: 20,
-                color: '#fff',
-                fontSize: 18,
-                fontWeight: 'bold',
-              }}>
-              {' '}
-              Sign Up
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('SignUpScreen7')}>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: '#fff',
+                  fontSize: 18,
+                  fontWeight: 'bold',
+                }}>
+                Sign Up
             </Text>
-          </TouchableOpacity>
-        </Card>
-
+            </TouchableOpacity>
+          </Card>
+        </Animatable.View>
         <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
           <Text style={{ textAlign: 'center', marginTop: 60 }}>
             Already have an account ?

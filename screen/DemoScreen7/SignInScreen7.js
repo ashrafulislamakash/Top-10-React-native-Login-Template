@@ -11,6 +11,7 @@ import {
   ImageBackground,
   Dimensions,
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import { Card } from 'react-native-paper';
 
 const SignInScreen7 = ({ navigation }) => {
@@ -29,52 +30,57 @@ const SignInScreen7 = ({ navigation }) => {
           height: '100%',
           resizeMode: 'cover',
         }}>
-        <Image
+        <Animatable.Image
+          animation="flipInY"
+          duraton="1500"
           source={require('../../assets/logo.png')}
           style={{
             width: Dimensions.get('window').width / 3,
             width: Dimensions.get('window').width / 3,
             alignSelf: 'center',
             resizeMode: 'contain',
-          }}></Image>
+          }} />
 
-        <Card style={styles.cardStyle}>
-          <TextInput
-            style={styles.inputstyle}
-            placeholder="Username"
-            autoCapitalize={'none'}
-            returnKeyType={'done'}
-            autoCorrect={false}
-          />
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+        <Animatable.View animation="flipInY">
 
-          <TextInput
-            style={styles.inputstyle}
-            secureTextEntry={true}
-            placeholder="Password"
-            returnKeyType={'done'}
-            autoCapitalize={'none'}
-            secureTextEntry={true}
-            autoCorrect={false}
-          />
+          <Card style={styles.cardStyle}>
+            <TextInput
+              style={styles.inputstyle}
+              placeholder="Username"
+              autoCapitalize={'none'}
+              returnKeyType={'done'}
+              autoCorrect={false}
+            />
+            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
 
-          <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <TextInput
+              style={styles.inputstyle}
+              secureTextEntry={true}
+              placeholder="Password"
+              returnKeyType={'done'}
+              autoCapitalize={'none'}
+              secureTextEntry={true}
+              autoCorrect={false}
+            />
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('HomeScreen')}>
-            <Text
-              style={{
-                fontSize: 20,
-                color: '#fff',
-                fontSize: 18,
-                fontWeight: 'bold',
-              }}>
-              {' '}
+            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('HomeScreen')}>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: '#fff',
+                  fontSize: 18,
+                  fontWeight: 'bold',
+                }}>
+                {' '}
               Sign In
             </Text>
-          </TouchableOpacity>
-        </Card>
+            </TouchableOpacity>
+          </Card>
+        </Animatable.View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen7')}>
           <Text style={{ textAlign: 'center', marginTop: 60 }}>

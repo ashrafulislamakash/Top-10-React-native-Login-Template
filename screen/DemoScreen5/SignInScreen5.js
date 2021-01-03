@@ -7,11 +7,11 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
-  SafeAreaView
+  SafeAreaView,
+  Dimensions
 } from 'react-native';
 import { Card } from 'react-native-paper';
 import * as Animatable from 'react-native-animatable';
-import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const SignInScreen5 = ({ navigation }) => {
@@ -49,16 +49,13 @@ const SignInScreen5 = ({ navigation }) => {
 
               <View style={styles.button}>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate('HomeScreen')}>
-                  <LinearGradient
-                    colors={['#FF839D', '#F50B9A']}
-                    style={styles.signIn}>
-                    <MaterialIcons
-                      name="arrow-forward"
-                      color="#fff"
-                      size={20}
-                    />
-                  </LinearGradient>
+                  onPress={() => navigation.navigate('HomeScreen')}
+                  style={styles.signIn}>
+                  <MaterialIcons
+                    name="arrow-forward"
+                    color="#fff"
+                    size={20}
+                  />
                 </TouchableOpacity>
               </View>
             </Card>
@@ -70,14 +67,14 @@ const SignInScreen5 = ({ navigation }) => {
               style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
               Dont Have an Account?
               <Text
-                style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
+                style={{ color: '#00701a', fontSize: 18, fontWeight: 'bold' }}>
                 Sign Up
               </Text>
             </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
-    </SafeAreaView>
+    </SafeAreaView >
   );
 };
 
@@ -101,11 +98,9 @@ const styles = StyleSheet.create({
   },
 
   cardStyle: {
-    maxHeight: 300,
-    maxWidth: 300,
+    width: Dimensions.get('window').width / 1.5,
+    height: Dimensions.get('window').height / 3,
     padding: 30,
-    height: 300,
-    width: 300,
     alignSelf: 'center',
     justifyContent: 'center',
     borderRadius: 150,
@@ -115,10 +110,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   SectionStyle: {
-    width: 170,
-    height: 35,
+    height: Dimensions.get('window').height / 20,
     alignSelf: 'center',
-    flexDirection: 'row',
     marginTop: 30,
   },
 
@@ -130,37 +123,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
     borderRadius: 20,
+    width: Dimensions.get('window').width / 2,
+    height: Dimensions.get('window').height / 20,
     borderColor: '#8b9cb5',
   },
+
   button: {
+    backgroundColor: "#00701a",
+    borderRadius: 50,
     alignSelf: 'center',
-    marginTop: 20,
-    width: 45,
+    width: Dimensions.get('window').width / 10,
+    height: Dimensions.get('window').height / 20,
+
   },
 
   signIn: {
-    width: '100%',
-    height: 35,
+    height: Dimensions.get('window').height / 20,
+    color: '#00701a',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
-  },
-
-  signupTextStyle: {
-    marginBottom: 60,
-  },
-
-  iconViewStyle: {
-    flex: 1,
-    flexDirection: 'row',
-    marginTop: 20,
-  },
-
-  iconStyle: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    width: 30,
-    height: 30,
   },
 });

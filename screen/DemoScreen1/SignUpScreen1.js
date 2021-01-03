@@ -88,7 +88,7 @@ const SignUpScreen1 = ({ navigation }) => {
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate('SignInScreen1')}
+            onPress={() => navigation.navigate('HomeScreen')}
             style={[
               styles.signIn,
               {

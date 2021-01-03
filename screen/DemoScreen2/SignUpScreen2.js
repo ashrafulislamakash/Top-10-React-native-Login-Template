@@ -10,8 +10,9 @@ import {
   Dimensions,
   SafeAreaView
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
-const SignUpScreen2 = ({navigation}) => {
+const SignUpScreen2 = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -21,10 +22,13 @@ const SignUpScreen2 = ({navigation}) => {
         translucent={true}
       />
       <View style={styles.header}>
-        <Image source={require('../../assets/logo2.png')} style={styles.logo} />
+        <Animatable.Image
+          animation="bounceIn"
+          duraton="1500"
+          source={require('../../assets/logo2.png')} style={styles.logo} />
       </View>
 
-      <View style={styles.footer}>
+      <Animatable.View animation="fadeInUpBig" style={styles.footer}>
         <TextInput
           style={styles.inputStyle}
           placeholder="Enter username"
@@ -49,8 +53,8 @@ const SignUpScreen2 = ({navigation}) => {
 
         <TouchableOpacity
           style={styles.buttonStyle}
-          onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+          onPress={() => navigation.navigate('HomeScreen')}>
+          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
             Sign Up
           </Text>
         </TouchableOpacity>
@@ -65,10 +69,10 @@ const SignUpScreen2 = ({navigation}) => {
               fontWeight: 'bold',
             }}>
             Already have an account ?
-            <Text style={{color: '#3C82FF'}}>Sign In</Text>
+            <Text style={{ color: '#3C82FF' }}>Sign In</Text>
           </Text>
         </TouchableOpacity>
-      </View>
+      </Animatable.View>
     </SafeAreaView>
   );
 };
@@ -87,7 +91,6 @@ const styles = StyleSheet.create({
   logo: {
     resizeMode: 'contain',
     alignSelf: 'center',
-    marginTop: 10,
     width: Dimensions.get('window').width / 3,
     height: Dimensions.get('window').height / 3,
   },

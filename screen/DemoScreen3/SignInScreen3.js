@@ -15,7 +15,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
-const SignInScreen3 = ({navigation}) => {
+const SignInScreen3 = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#DEFE0A" barStyle="dark-content" />
@@ -29,9 +29,9 @@ const SignInScreen3 = ({navigation}) => {
           <FontAwesome name="user-o" color="#DEFE0A" size={20} />
 
           <TextInput
-            placeholder="Your Username"
+            placeholder="Username"
             placeholderTextColor="#DEFE0A"
-            style={[styles.textInput, {color: '#DEFE0A'}]}
+            style={[styles.textInput, { color: '#DEFE0A' }]}
           />
           <View animation="bounceIn">
             <Feather name="check-circle" color="#DEFE0A" size={20} />
@@ -42,9 +42,9 @@ const SignInScreen3 = ({navigation}) => {
           <Feather name="lock" color="#DEFE0A" size={20} />
 
           <TextInput
-            placeholder="Your Password"
+            placeholder="Password"
             placeholderTextColor="#DEFE0A"
-            style={[styles.textInput, {color: '#DEFE0A'}]}
+            style={[styles.textInput, { color: '#DEFE0A' }]}
           />
 
           <TouchableOpacity>
@@ -53,7 +53,7 @@ const SignInScreen3 = ({navigation}) => {
         </View>
 
         <TouchableOpacity>
-          <Text style={{color: '#DEFE0A', marginTop: 20}}>
+          <Text style={{ color: '#DEFE0A', marginTop: 20 }}>
             Forgot password?
           </Text>
         </TouchableOpacity>
@@ -61,11 +61,11 @@ const SignInScreen3 = ({navigation}) => {
         <View style={styles.button}>
           <TouchableOpacity
             style={styles.signIn}
-            onPress={() => navigation.navigate('Home')}>
+            onPress={() => navigation.navigate('SignUpScreen3')}>
             <LinearGradient
               colors={['#DEFE0A', '#6F7F05']}
               style={styles.signIn}>
-              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+              <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
                 Sign In
               </Text>
             </LinearGradient>
@@ -75,9 +75,9 @@ const SignInScreen3 = ({navigation}) => {
             onPress={() => navigation.navigate('SignUpScreen3')}
             style={[
               styles.signIn,
-              {borderColor: '#DEFE0A', borderWidth: 1, marginTop: 15},
+              { borderColor: '#DEFE0A', borderWidth: 1, marginTop: 15 },
             ]}>
-            <Text style={{color: '#DEFE0A', fontSize: 18, fontWeight: 'bold'}}>
+            <Text style={{ color: '#DEFE0A', fontSize: 18, fontWeight: 'bold' }}>
               Sign Up
             </Text>
           </TouchableOpacity>

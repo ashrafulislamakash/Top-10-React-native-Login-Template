@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import * as Animatable from 'react-native-animatable';
 
 const SignUpScreen8 = ({ navigation }) => {
   return (
@@ -24,7 +25,9 @@ const SignUpScreen8 = ({ navigation }) => {
 
       <View>
         <View style={{ alignItems: 'center' }}>
-          <Image
+          <Animatable.Image
+            animation="zoomIn"
+            duraton="1500"
             source={require('../../assets/logo8.png')}
             style={{
               width: '100%',
@@ -35,84 +38,85 @@ const SignUpScreen8 = ({ navigation }) => {
         </View>
 
         <View style={styles.headerText}>
-          <Text> SIGN UP</Text>
+          <Text> SIGN Up</Text>
         </View>
-
-        <View style={styles.SectionStyle}>
+        <Animatable.View animation="slideInRight" style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
-            placeholder="username"
-            color="#8b9cb5"
+            placeholder="Username"
             placeholderTextColor="#8b9cb5"
             autoCapitalize="none"
           />
-        </View>
+        </Animatable.View>
 
-        <View style={styles.SectionStyle}>
+        <Animatable.View animation="slideInLeft" style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
             placeholder="E-mail"
             placeholderTextColor="#8b9cb5"
-            color="#8b9cb5"
             autoCapitalize="none"
           />
-        </View>
+        </Animatable.View>
 
-        <View style={styles.SectionStyle}>
+        <Animatable.View animation="slideInRight" style={styles.SectionStyle}>
           <TextInput
             style={styles.inputStyle}
             placeholder="Password"
             secureTextEntry={true}
-            color="#8b9cb5"
             placeholderTextColor="#8b9cb5"
           />
-        </View>
+        </Animatable.View>
 
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('HomeScreen')}>
-          <Text style={styles.buttonTextStyle}>SIGN UP</Text>
+          <Animatable.Text animation="zoomIn" style={styles.buttonTextStyle}>Sign Up</Animatable.Text>
         </TouchableOpacity>
 
-        <View style={styles.headerText}>
-          <Text>OR</Text>
-        </View>
-
-        <View style={styles.iconViewStyle}>
-          <View style={styles.iconStyle}>
-            <TouchableOpacity>
-              <MaterialCommunityIcons
-                name="facebook"
-                color="#50A8FE"
-                size={30}
-              />
-            </TouchableOpacity>
+        <Animatable.View animation="zoomIn">
+          <View style={styles.headerText}>
+            <Text>OR</Text>
           </View>
 
-          <View style={styles.iconStyle}>
-            <TouchableOpacity>
-              <AntDesign name="twitter" color="#50A8FE" size={30} />
-            </TouchableOpacity>
+          <View style={styles.iconViewStyle}>
+            <View style={styles.iconStyle}>
+              <TouchableOpacity>
+                <MaterialCommunityIcons
+                  name="facebook"
+                  color="#50A8FE"
+                  size={30}
+                />
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.iconStyle}>
+              <TouchableOpacity>
+                <AntDesign name="twitter" color="#50A8FE" size={30} />
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.iconStyle}>
+              <TouchableOpacity>
+                <AntDesign name="google" color="#50A8FE" size={30} />
+              </TouchableOpacity>
+            </View>
           </View>
 
-          <View style={styles.iconStyle}>
-            <TouchableOpacity>
-              <AntDesign name="google" color="#50A8FE" size={30} />
-            </TouchableOpacity>
-          </View>
-        </View>
+        </Animatable.View>
 
-        <View>
+        <Animatable.View animation="slideInLeft">
           <Text
             style={styles.registerTextStyle}
             onPress={() => navigation.navigate('HomeScreen')}>
             Existing User?
             <Text style={{ color: '#50A8FE', fontSize: 18, fontWeight: 'bold' }}>
-              SIGN IN
+              Sign In
             </Text>
           </Text>
-        </View>
+        </Animatable.View>
+
       </View>
+
     </SafeAreaView>
   );
 };

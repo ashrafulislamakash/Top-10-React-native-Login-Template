@@ -9,6 +9,7 @@ import {
   Dimensions,
   SafeAreaView
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const WelcomeScreen10 = ({ navigation }) => {
@@ -21,6 +22,7 @@ const WelcomeScreen10 = ({ navigation }) => {
         translucent={true}
       />
 
+
       <View style={styles.hederSection}>
         <View style={styles.headerText}>
           <Text style={{ fontSize: 30, color: '#3C82FF', textAlign: 'center' }}>
@@ -29,15 +31,22 @@ const WelcomeScreen10 = ({ navigation }) => {
           </Text>
           <Text> Please login or sign up to continue using our app.</Text>
         </View>
-        <Image
+
+        <Animatable.Image
+          animation="bounceIn"
+          duraton="1500"
           source={require('../../assets/bg10.png')}
           resizeMode="contain"
           style={styles.headerlogo}
         />
       </View>
 
-      <View style={styles.footerSection}>
+
+
+      <Animatable.View style={styles.footerSection}
+        animation="fadeInUpBig">
         <Text style={{ textAlign: 'center' }}>Enter via social networks</Text>
+
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
@@ -53,7 +62,7 @@ const WelcomeScreen10 = ({ navigation }) => {
 
         <Text style={{ textAlign: 'center' }}>or login with email</Text>
 
-        <View style={styles.buttonSection}>
+        <Animatable.View animation="slideInLeft" duraton="4000" style={styles.buttonSection}>
           <TouchableOpacity
             style={styles.emailSignupButton}
             onPress={() => navigation.navigate('SignUpScreen10')}>
@@ -64,11 +73,10 @@ const WelcomeScreen10 = ({ navigation }) => {
                 fontSize: 18,
                 fontWeight: 'bold',
               }}>
-              {' '}
               Sign Up
             </Text>
           </TouchableOpacity>
-        </View>
+        </Animatable.View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignInScreen10')}>
           <Text style={{ textAlign: 'center', marginTop: 30 }}>
@@ -78,7 +86,7 @@ const WelcomeScreen10 = ({ navigation }) => {
             </Text>
           </Text>
         </TouchableOpacity>
-      </View>
+      </Animatable.View>
     </SafeAreaView>
   );
 };
