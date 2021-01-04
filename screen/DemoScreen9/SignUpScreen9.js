@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 
 import {
   View,
@@ -8,15 +8,18 @@ import {
   StatusBar,
   TextInput,
   ImageBackground,
-  Image,
   Dimensions,
   SafeAreaView
 } from 'react-native';
+import CheckBox from '@react-native-community/checkbox'
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const SignUpScreen9 = ({ navigation }) => {
+
+  const [isSelected, setSelection] = useState(false);
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -37,17 +40,17 @@ const SignUpScreen9 = ({ navigation }) => {
           <Animatable.View animation="zoomIn"
             style={styles.buttonSection}>
             <TouchableOpacity
-              style={[styles.rightbutton, { backgroundColor: '#4CB8C4' }]}>
-              <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+              style={[styles.rightbutton, { backgroundColor: '#fff' }]}>
+              <Text style={{ color: '#4CB8C4', fontSize: 18, fontWeight: 'bold' }}>
                 Sign In
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.leftbutton, { backgroundColor: '#fff' }]}
+              style={[styles.leftbutton, { backgroundColor: '#4CB8C4' }]}
               onPress={() => navigation.navigate('SignUpScreen9')}>
               <Text
-                style={{ color: '#4CB8C4', fontSize: 18, fontWeight: 'bold' }}>
+                style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
                 Sign Up
               </Text>
             </TouchableOpacity>
@@ -83,6 +86,15 @@ const SignUpScreen9 = ({ navigation }) => {
               placeholderTextColor="#8b9cb5"
             />
           </View>
+        </View>
+
+        <View style={styles.checkboxContainer}>
+          <CheckBox
+            title="Click Here"
+            value={isSelected}
+            onValueChange={setSelection}
+          />
+          <Text style={styles.checkboxlabel}>I agree with Private Policy</Text>
         </View>
 
         <Animatable.View animation="zoomIn" style={styles.buttonSection}>
@@ -177,7 +189,15 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: '#E2E6EA',
   },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    alignItems: 'center',
+  },
 
+  checkboxlabel: {
+    margin: 5,
+  },
 
   signupButton: {
     flexDirection: 'row',
