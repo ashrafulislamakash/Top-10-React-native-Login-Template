@@ -19,7 +19,7 @@ const SignUpScreen5 = ({ navigation }) => {
       <StatusBar
         barStyle="light-content"
         hidden={false}
-        backgroundColor="#00701a"
+        backgroundColor="#FC7437"
         translucent={true}
       />
       <ImageBackground
@@ -56,7 +56,7 @@ const SignUpScreen5 = ({ navigation }) => {
               <TouchableOpacity
                 onPress={() => navigation.navigate('HomeScreen')}>
                 <LinearGradient
-                  colors={['#FF839D', '#F50B9A']}
+                  colors={['#FC7437', '#FF21F8']}
                   style={styles.signIn}>
                   <MaterialIcons name="arrow-forward" color="#fff" size={20} />
                 </LinearGradient>
@@ -69,7 +69,7 @@ const SignUpScreen5 = ({ navigation }) => {
               style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
               Alread Have an Account?
               <Text
-                style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
+                style={{ color: '#FF0467', fontSize: 18, fontWeight: 'bold' }}>
                 Sign In
               </Text>
             </Text>
@@ -149,17 +149,4 @@ const styles = StyleSheet.create({
     marginBottom: 60,
   },
 
-  iconViewStyle: {
-    flex: 1,
-    flexDirection: 'row',
-    marginTop: 20,
-  },
-
-  iconStyle: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    width: 30,
-    height: 30,
-  },
 });

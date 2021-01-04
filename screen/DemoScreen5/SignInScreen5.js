@@ -7,11 +7,10 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
-  SafeAreaView,
-  Dimensions
+  SafeAreaView
 } from 'react-native';
 import { Card } from 'react-native-paper';
-import * as Animatable from 'react-native-animatable';
+import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const SignInScreen5 = ({ navigation }) => {
@@ -20,61 +19,57 @@ const SignInScreen5 = ({ navigation }) => {
       <StatusBar
         barStyle="light-content"
         hidden={false}
-        backgroundColor="#00701a"
+        backgroundColor="#FC7437"
         translucent={true}
       />
       <ImageBackground
         source={require('../../assets/bg5.png')}
         style={styles.backgroundstyle}>
         <View style={styles.mainBody}>
-          <Animatable.View animation="bounceIn">
-            <Card style={styles.cardStyle}>
-              <View style={styles.SectionStyle}>
-                <TextInput
-                  style={styles.inputStyle}
-                  placeholder="Username"
-                  placeholderTextColor="#8b9cb5"
-                  autoCapitalize="none"
-                />
-              </View>
+          <Card style={styles.cardStyle}>
 
-              <View style={styles.SectionStyle}>
-                <TextInput
-                  style={styles.inputStyle}
-                  placeholder="Password"
-                  secureTextEntry={true}
-                  placeholderTextColor="#8b9cb5"
-                />
-              </View>
 
-              <View style={styles.button}>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('HomeScreen')}
+            <View style={styles.SectionStyle}>
+              <TextInput
+                style={styles.inputStyle}
+                placeholder="Username"
+                placeholderTextColor="#8b9cb5"
+              />
+            </View>
+            <View style={styles.SectionStyle}>
+              <TextInput
+                style={styles.inputStyle}
+                placeholder="Password"
+                secureTextEntry={true}
+                placeholderTextColor="#8b9cb5"
+              />
+            </View>
+
+            <View style={styles.button}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('HomeScreen')}>
+                <LinearGradient
+                  colors={['#FC7437', '#FF21F8']}
                   style={styles.signIn}>
-                  <MaterialIcons
-                    name="arrow-forward"
-                    color="#fff"
-                    size={20}
-                  />
-                </TouchableOpacity>
-              </View>
-            </Card>
-          </Animatable.View>
+                  <MaterialIcons name="arrow-forward" color="#fff" size={20} />
+                </LinearGradient>
+              </TouchableOpacity>
+            </View>
+          </Card>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('SignUpScreen5')}>
+          <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
             <Text
               style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-              Dont Have an Account?
+              Alread Have an Account?
               <Text
-                style={{ color: '#00701a', fontSize: 18, fontWeight: 'bold' }}>
-                Sign Up
+                style={{ color: '#FF0467', fontSize: 18, fontWeight: 'bold' }}>
+                Sign In
               </Text>
             </Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
-    </SafeAreaView >
+    </SafeAreaView>
   );
 };
 
@@ -98,9 +93,11 @@ const styles = StyleSheet.create({
   },
 
   cardStyle: {
-    width: Dimensions.get('window').width / 1.5,
-    height: Dimensions.get('window').height / 3,
+    maxHeight: 300,
+    maxWidth: 300,
     padding: 30,
+    height: 300,
+    width: 300,
     alignSelf: 'center',
     justifyContent: 'center',
     borderRadius: 150,
@@ -110,8 +107,10 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   SectionStyle: {
-    height: Dimensions.get('window').height / 20,
+    width: 170,
+    height: 35,
     alignSelf: 'center',
+    flexDirection: 'row',
     marginTop: 30,
   },
 
@@ -123,25 +122,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
     borderRadius: 20,
-    width: Dimensions.get('window').width / 2,
-    height: Dimensions.get('window').height / 20,
     borderColor: '#8b9cb5',
   },
-
   button: {
-    backgroundColor: "#00701a",
-    borderRadius: 50,
     alignSelf: 'center',
-    width: Dimensions.get('window').width / 10,
-    height: Dimensions.get('window').height / 20,
-
+    marginTop: 20,
+    width: 45,
   },
 
   signIn: {
-    height: Dimensions.get('window').height / 20,
-    color: '#00701a',
+    width: '100%',
+    height: 35,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
   },
+
+  signupTextStyle: {
+    marginBottom: 60,
+  },
+
 });
