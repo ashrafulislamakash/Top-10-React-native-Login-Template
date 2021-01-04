@@ -10,6 +10,7 @@ import {
   SafeAreaView
 } from 'react-native';
 import { Card } from 'react-native-paper';
+import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
@@ -19,13 +20,15 @@ const SignInScreen5 = ({ navigation }) => {
       <StatusBar
         barStyle="light-content"
         hidden={false}
-        backgroundColor="#FC7437"
+        backgroundColor="#FF0467"
         translucent={true}
       />
       <ImageBackground
         source={require('../../assets/bg5.png')}
         style={styles.backgroundstyle}>
-        <View style={styles.mainBody}>
+
+
+        <Animatable.View animation="zoomInUp" style={styles.mainBody}>
           <Card style={styles.cardStyle}>
 
 
@@ -47,27 +50,30 @@ const SignInScreen5 = ({ navigation }) => {
 
             <View style={styles.button}>
               <TouchableOpacity
-                onPress={() => navigation.navigate('HomeScreen')}>
+                onPress={() => navigation.navigate('SignUpScreen5')}>
                 <LinearGradient
-                  colors={['#FC7437', '#FF21F8']}
+                  colors={['#FC7437', '#FF0467']}
                   style={styles.signIn}>
                   <MaterialIcons name="arrow-forward" color="#fff" size={20} />
                 </LinearGradient>
               </TouchableOpacity>
             </View>
           </Card>
+        </Animatable.View >
 
-          <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-            <Text
-              style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
-              Alread Have an Account?
+        <TouchableOpacity
+          style={styles.signupTextStyle}
+          onPress={() => navigation.navigate('SignUpScreen5')}>
+          <Text
+            style={{ color: '#8b9cb5', textAlign: 'center' }}>
+            Don't Have an Account?
               <Text
-                style={{ color: '#FF0467', fontSize: 18, fontWeight: 'bold' }}>
-                Sign In
+              style={{ color: '#FF0467', fontSize: 18, fontWeight: 'bold' }}>
+              Sign Up
               </Text>
-            </Text>
-          </TouchableOpacity>
-        </View>
+          </Text>
+        </TouchableOpacity>
+
       </ImageBackground>
     </SafeAreaView>
   );
@@ -139,7 +145,7 @@ const styles = StyleSheet.create({
   },
 
   signupTextStyle: {
-    marginBottom: 60,
+    marginBottom: 20,
   },
 
 });

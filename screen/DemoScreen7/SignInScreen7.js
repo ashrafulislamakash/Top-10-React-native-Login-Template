@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignContent: 'center',
     width: Dimensions.get('window').width / 1.5,
-    height: Dimensions.get('window').height / 5,
+    height: Dimensions.get('window').height / 5.5,
   },
 
   inputstyle: {
