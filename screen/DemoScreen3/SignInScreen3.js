@@ -24,7 +24,7 @@ const SignInScreen3 = ({ navigation }) => {
         <Text style={styles.text_header}>Welcome back!</Text>
       </View>
 
-      <Animatable.View style={styles.footer} animation="fadeInUpBig">
+      <Animatable.View animation="fadeInUpBig" style={styles.footer} >
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#DEFE0A" size={20} />
 

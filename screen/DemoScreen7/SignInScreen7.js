@@ -30,6 +30,7 @@ const SignInScreen7 = ({ navigation }) => {
           height: '100%',
           resizeMode: 'cover',
         }}>
+
         <Animatable.Image
           animation="flipInY"
           duraton="1500"
@@ -42,7 +43,6 @@ const SignInScreen7 = ({ navigation }) => {
           }} />
 
         <Animatable.View animation="flipInY">
-
           <Card style={styles.cardStyle}>
             <TextInput
               style={styles.inputstyle}
@@ -67,7 +67,7 @@ const SignInScreen7 = ({ navigation }) => {
 
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate('HomeScreen')}>
+              onPress={() => navigation.navigate('SignUpScreen7')}>
               <Text
                 style={{
                   fontSize: 20,
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#fff',
     alignContent: 'center',
-    margin: 5,
     width: Dimensions.get('window').width / 1.5,
     height: Dimensions.get('window').height / 5,
   },
@@ -122,11 +121,10 @@ const styles = StyleSheet.create({
 
   button: {
     alignSelf: 'center',
-    margin: 20,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E268B7',
     width: Dimensions.get('window').width / 3,
-    height: 50,
+    height: 40,
   },
 });

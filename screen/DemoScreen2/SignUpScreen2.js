@@ -21,14 +21,14 @@ const SignUpScreen2 = ({ navigation }) => {
         backgroundColor="#396AFC"
         translucent={true}
       />
-      <View style={styles.header}>
+      <View>
         <Animatable.Image
           animation="bounceIn"
           duraton="1500"
           source={require('../../assets/logo2.png')} style={styles.logo} />
       </View>
 
-      <Animatable.View animation="fadeInUpBig" style={styles.footer}>
+      <Animatable.View animation="fadeInUpBig">
         <TextInput
           style={styles.inputStyle}
           placeholder="Enter username"
@@ -81,25 +81,17 @@ export default SignUpScreen2;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: 'black',
   },
 
-  header: {
-    flex: 1,
-  },
 
   logo: {
     resizeMode: 'contain',
     alignSelf: 'center',
     width: Dimensions.get('window').width / 3,
     height: Dimensions.get('window').height / 3,
-  },
-
-  footer: {
-    flex: 2,
-    alignItems: 'center',
-    alignContent: 'center',
-    alignSelf: 'center',
   },
 
   inputStyle: {

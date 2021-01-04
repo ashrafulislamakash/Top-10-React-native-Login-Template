@@ -32,7 +32,7 @@ const SignInScreen1 = ({ navigation }) => {
           <FontAwesome name="user-o" color="#FB599B" size={20} />
 
           <TextInput
-            placeholder="Your Username"
+            placeholder="Username"
             placeholderTextColor="#FB599B"
             style={[styles.textInput, { color: '#FB599B' }]}
           />
@@ -53,7 +53,8 @@ const SignInScreen1 = ({ navigation }) => {
         <View style={styles.action}>
           <Feather name="lock" color="#FB599B" size={20} />
           <TextInput
-            placeholder="Your Password"
+            placeholder="Password"
+            secureTextEntry={true}
             placeholderTextColor="#FB599B"
             style={[styles.textInput, { color: '#FB599B' }]}
           />

@@ -12,11 +12,11 @@ import {
   Dimensions,
   SafeAreaView
 } from 'react-native';
-
+import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const SignInScreen9 = ({navigation}) => {
+const SignInScreen9 = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -27,34 +27,36 @@ const SignInScreen9 = ({navigation}) => {
       />
       <View style={styles.hederSection}>
         <ImageBackground
-          style={{width: '100%', height: '100%'}}
+          style={{ width: '100%', height: '100%' }}
           source={require('../../assets/bg.png')}>
-          <Image
-            source={require('../../assets/livingLogo.png')}
-            style={styles.headerLogo}
-          />
 
-          <View style={styles.buttonSection}>
+          <Animatable.Image animation="zoomIn"
+            style={styles.headerLogo}
+            source={require('../../assets/livingLogo.png')} />
+
+          <Animatable.View animation="zoomIn"
+            style={styles.buttonSection}>
             <TouchableOpacity
-              style={[styles.rightbutton, {backgroundColor: '#4CB8C4'}]}>
-              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+              style={[styles.rightbutton, { backgroundColor: '#4CB8C4' }]}>
+              <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
                 Sign In
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.leftbutton, {backgroundColor: '#fff'}]}
+              style={[styles.leftbutton, { backgroundColor: '#fff' }]}
               onPress={() => navigation.navigate('SignUpScreen9')}>
               <Text
-                style={{color: '#4CB8C4', fontSize: 18, fontWeight: 'bold'}}>
+                style={{ color: '#4CB8C4', fontSize: 18, fontWeight: 'bold' }}>
                 Sign Up
               </Text>
             </TouchableOpacity>
-          </View>
+          </Animatable.View>
         </ImageBackground>
       </View>
 
-      <View style={styles.footerSection}>
+      <Animatable.View animation="fadeInLeftBig"
+        style={styles.footerSection}>
         <View style={styles.cardStyle}>
           <View>
             <TextInput
@@ -74,30 +76,29 @@ const SignInScreen9 = ({navigation}) => {
           </View>
         </View>
 
-        <View style={styles.buttonSection}>
+        <Animatable.View animation="zoomIn" style={styles.buttonSection}>
           <TouchableOpacity
             style={styles.signupButton}
-            onPress={() => navigation.navigate('HomeScreen')}>
+            onPress={() => navigation.navigate('SignUpScreen9')}>
             <LinearGradient
               colors={['#4CB8C4', '#3CD3AD']}
               style={styles.signupButton}>
-              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+              <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
                 {' '}
                 Proceed
               </Text>
               <MaterialIcons name="navigate-next" color="#fff" size={20} />
             </LinearGradient>
           </TouchableOpacity>
-        </View>
+        </Animatable.View>
 
         <View style={styles.linestyle} />
-
         <TouchableOpacity>
-          <Text style={{textAlign: 'center', color: '#3C82FF', marginTop: 10}}>
+          <Text style={{ textAlign: 'center', color: '#3C82FF', marginTop: 10 }}>
             Forgot Password?
           </Text>
         </TouchableOpacity>
-      </View>
+      </Animatable.View>
     </SafeAreaView>
   );
 };
@@ -111,22 +112,27 @@ const styles = StyleSheet.create({
 
   hederSection: {
     flex: 1.5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   headerLogo: {
+    flex: 1,
+    resizeMode: 'contain',
+    alignContent: "center",
     alignSelf: 'center',
-    margin: 10,
-    justifyContent: 'center',
-    marginTop: 50,
+    width: Dimensions.get('window').width / 2.5,
+    height: Dimensions.get('window').height / 13,
   },
 
   footerSection: {
-    flex: 3,
+    flex: 4,
   },
 
   buttonSection: {
     flexDirection: 'row',
-    alignSelf: 'center',
+    justifyContent: 'center',
+    marginBottom: "-5%",
   },
 
   rightbutton: {

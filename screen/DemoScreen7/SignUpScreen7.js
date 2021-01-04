@@ -73,7 +73,7 @@ const SignUpScreen7 = ({ navigation }) => {
 
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate('SignUpScreen7')}>
+              onPress={() => navigation.navigate('HomeScreen')}>
               <Text
                 style={{
                   fontSize: 20,
@@ -112,7 +112,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#fff',
     alignContent: 'center',
-    margin: 5,
     width: Dimensions.get('window').width / 1.5,
     height: Dimensions.get('window').height / 3.6,
   },
@@ -126,11 +125,10 @@ const styles = StyleSheet.create({
 
   button: {
     alignSelf: 'center',
-    margin: 20,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#E268B7',
     width: Dimensions.get('window').width / 3,
-    height: 50,
+    height: 40,
   },
 });

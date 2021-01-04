@@ -29,7 +29,7 @@ const SignUpScreen1 = ({ navigation }) => {
           <FontAwesome name="user-o" color="#D506C0" size={20} />
           <TextInput
             placeholderTextColor="#FB599B"
-            placeholder="Your Username"
+            placeholder="Username"
             style={styles.textInput}
             autoCapitalize="none"
           />
@@ -44,8 +44,9 @@ const SignUpScreen1 = ({ navigation }) => {
           <Feather name="lock" color="#D506C0" size={20} />
 
           <TextInput
+            placeholder="Password"
             placeholderTextColor="#FB599B"
-            placeholder="Your Password"
+            secureTextEntry={true}
             style={styles.textInput}
             autoCapitalize="none"
           />
@@ -62,8 +63,9 @@ const SignUpScreen1 = ({ navigation }) => {
           <Feather name="lock" color="#D506C0" size={20} />
 
           <TextInput
+            placeholder="Confirm Password"
             placeholderTextColor="#FB599B"
-            placeholder="Confirm Your Password"
+            secureTextEntry={true}
             style={styles.textInput}
             autoCapitalize="none"
           />

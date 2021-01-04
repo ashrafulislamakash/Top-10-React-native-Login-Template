@@ -143,9 +143,8 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 1,
-    justifyContent: 'flex-end',
-    paddingHorizontal: 20,
-    paddingBottom: 10,
+    alignSelf: 'center',
+    justifyContent: 'center',
   },
   footer: {
     flex: 3,
@@ -163,8 +162,6 @@ const styles = StyleSheet.create({
 
   action: {
     flexDirection: 'row',
-    marginTop: 5,
-    marginBottom: 5,
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#fff',
@@ -181,6 +178,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
   },
+
   signIn: {
     width: '100%',
     height: 50,
@@ -202,7 +200,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 40,
     height: 40,
-    margin: 20,
+    margin: 10,
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'space-evenly',
