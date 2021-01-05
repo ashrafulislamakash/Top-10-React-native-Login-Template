@@ -1,5 +1,5 @@
 import React from 'react';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import SignInScreen1 from './DemoScreen1/SignInScreen1';
@@ -21,13 +21,13 @@ const HomeScreen = (navigation) => {
       activeTintColor="#81B247"
       inactiveColor="#343430"
       initialRouteName="SignInScreen1"
-      barStyle={{ backgroundColor: '#D506C0' }}>
+      barStyle={{backgroundColor: '#D506C0'}}>
       <Tab.Screen
         name="Demo1"
         component={SignInScreen1}
         options={{
           tabBarLabel: 'Demo1',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -39,7 +39,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo2',
           tabBarColor: '#396AFC',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -51,7 +51,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo3',
           tabBarColor: '#DEFE0A',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -63,7 +63,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo4',
           tabBarColor: '#E60CA5',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -75,7 +75,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo5',
           tabBarColor: '#FF0467',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -87,7 +87,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo6',
           tabBarColor: '#8E24AA',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -98,7 +98,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo7',
           tabBarColor: '#E268B7',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -109,7 +109,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo8',
           tabBarColor: '#8300F5',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -120,7 +120,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo9',
           tabBarColor: '#3CD3AD',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}
@@ -131,7 +131,7 @@ const HomeScreen = (navigation) => {
         options={{
           tabBarLabel: 'Demo10',
           tabBarColor: '#3C82FF',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="react" color={color} size={26} />
           ),
         }}

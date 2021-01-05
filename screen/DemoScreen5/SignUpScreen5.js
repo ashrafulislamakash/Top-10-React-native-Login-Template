@@ -7,14 +7,14 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import { Card } from 'react-native-paper';
+import {Card} from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const SignUpScreen5 = ({ navigation }) => {
+const SignUpScreen5 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -26,8 +26,6 @@ const SignUpScreen5 = ({ navigation }) => {
       <ImageBackground
         source={require('../../assets/bg5.png')}
         style={styles.backgroundstyle}>
-
-
         <Animatable.View animation="zoomInUp" style={styles.mainBody}>
           <Card style={styles.cardStyle}>
             <View style={styles.SectionStyle}>
@@ -66,16 +64,15 @@ const SignUpScreen5 = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </Card>
-
         </Animatable.View>
-        <TouchableOpacity style={styles.signupTextStyle} onPress={() => navigation.navigate('HomeScreen')}>
-          <Text
-            style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
+        <TouchableOpacity
+          style={styles.signupTextStyle}
+          onPress={() => navigation.navigate('HomeScreen')}>
+          <Text style={{color: '#8b9cb5', textAlign: 'center', marginTop: 30}}>
             Alread Have an Account?
-              <Text
-              style={{ color: '#FF0467', fontSize: 18, fontWeight: 'bold' }}>
+            <Text style={{color: '#FF0467', fontSize: 18, fontWeight: 'bold'}}>
               Sign In
-              </Text>
+            </Text>
           </Text>
         </TouchableOpacity>
       </ImageBackground>
@@ -151,5 +148,4 @@ const styles = StyleSheet.create({
   signupTextStyle: {
     marginBottom: 20,
   },
-
 });

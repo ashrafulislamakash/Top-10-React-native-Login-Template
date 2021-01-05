@@ -13,7 +13,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import * as Animatable from 'react-native-animatable';
 
-const SignUpScreen8 = ({ navigation }) => {
+const SignUpScreen8 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.continer}>
       <StatusBar
@@ -24,7 +24,7 @@ const SignUpScreen8 = ({ navigation }) => {
       />
 
       <View>
-        <View style={{ alignItems: 'center' }}>
+        <View style={{alignItems: 'center'}}>
           <Animatable.Image
             animation="zoomIn"
             duraton="1500"
@@ -70,7 +70,9 @@ const SignUpScreen8 = ({ navigation }) => {
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('HomeScreen')}>
-          <Animatable.Text animation="zoomIn" style={styles.buttonTextStyle}>Sign Up</Animatable.Text>
+          <Animatable.Text animation="zoomIn" style={styles.buttonTextStyle}>
+            Sign Up
+          </Animatable.Text>
         </TouchableOpacity>
 
         <Animatable.View animation="zoomIn">
@@ -101,7 +103,6 @@ const SignUpScreen8 = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-
         </Animatable.View>
 
         <Animatable.View animation="slideInLeft">
@@ -109,14 +110,12 @@ const SignUpScreen8 = ({ navigation }) => {
             style={styles.registerTextStyle}
             onPress={() => navigation.navigate('HomeScreen')}>
             Existing User?
-            <Text style={{ color: '#50A8FE', fontSize: 18, fontWeight: 'bold' }}>
+            <Text style={{color: '#50A8FE', fontSize: 18, fontWeight: 'bold'}}>
               Sign In
             </Text>
           </Text>
         </Animatable.View>
-
       </View>
-
     </SafeAreaView>
   );
 };

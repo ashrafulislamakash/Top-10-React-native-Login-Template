@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 import {
   View,
@@ -8,13 +8,13 @@ import {
   StatusBar,
   TextInput,
   Dimensions,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import CheckBox from '@react-native-community/checkbox';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const SignInScreen10 = ({ navigation }) => {
+const SignInScreen10 = ({navigation}) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
@@ -28,25 +28,29 @@ const SignInScreen10 = ({ navigation }) => {
 
       <Animatable.View animation="fadeInDownBig" style={styles.hederSection}>
         <View style={styles.headerText}>
-          <Animatable.Text aanimation="slideInDown" style={{ fontSize: 30, color: '#3C82FF', textAlign: 'center' }}> Login Now</Animatable.Text>
+          <Animatable.Text
+            aanimation="slideInDown"
+            style={{fontSize: 30, color: '#3C82FF', textAlign: 'center'}}>
+            {' '}
+            Login Now
+          </Animatable.Text>
           <Text> Please login to continue using our app.</Text>
         </View>
 
-        <Text style={{ textAlign: 'center' }}>Enter via social networks</Text>
+        <Text style={{textAlign: 'center'}}>Enter via social networks</Text>
 
         <View style={styles.buttonSection}>
           <TouchableOpacity
-            style={[styles.button, { backgroundColor: '#76A9EA' }]}>
+            style={[styles.button, {backgroundColor: '#76A9EA'}]}>
             <MaterialCommunityIcons name="facebook" color="#fff" size={35} />
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.button, { backgroundColor: '#475993' }]}>
+            style={[styles.button, {backgroundColor: '#475993'}]}>
             <MaterialCommunityIcons name="twitter" color="#fff" size={35} />
           </TouchableOpacity>
         </View>
       </Animatable.View>
-
 
       <Animatable.View animation="fadeInUpBig" style={styles.footerSection}>
         <View>
@@ -75,7 +79,7 @@ const SignInScreen10 = ({ navigation }) => {
           />
           <Text style={styles.checkboxlabel}>Remember me</Text>
           <TouchableOpacity>
-            <Text style={[styles.checkboxlabel, { color: '#3C82FF' }]}>
+            <Text style={[styles.checkboxlabel, {color: '#3C82FF'}]}>
               Forgot password?
             </Text>
           </TouchableOpacity>
@@ -85,14 +89,19 @@ const SignInScreen10 = ({ navigation }) => {
           <TouchableOpacity
             style={styles.signupButton}
             onPress={() => navigation.navigate('SignUpScreen10')}>
-            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}> Sign In</Text>
+            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+              {' '}
+              Sign In
+            </Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen10')}>
-          <Text style={{ textAlign: 'center', marginTop: 30 }}>
+          <Text style={{textAlign: 'center', marginTop: 30}}>
             Don’t have an account ?
-            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>Sign Up</Text>
+            <Text style={{color: '#3C82FF', fontSize: 18, fontWeight: 'bold'}}>
+              Sign Up
+            </Text>
           </Text>
         </TouchableOpacity>
       </Animatable.View>

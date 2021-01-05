@@ -12,9 +12,9 @@ import {
   Dimensions,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import { Card } from 'react-native-paper';
+import {Card} from 'react-native-paper';
 
-const SignUpScreen7 = ({ navigation }) => {
+const SignUpScreen7 = ({navigation}) => {
   return (
     <SafeAreaView behavior="padding" style={styles.container}>
       <StatusBar
@@ -39,7 +39,8 @@ const SignUpScreen7 = ({ navigation }) => {
             width: Dimensions.get('window').width / 3,
             alignSelf: 'center',
             resizeMode: 'contain',
-          }} />
+          }}
+        />
 
         <Animatable.View animation="flipInY">
           <Card style={styles.cardStyle}>
@@ -50,7 +51,7 @@ const SignUpScreen7 = ({ navigation }) => {
               returnKeyType={'done'}
               autoCorrect={false}
             />
-            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
 
             <TextInput
               style={styles.inputstyle}
@@ -59,7 +60,7 @@ const SignUpScreen7 = ({ navigation }) => {
               autoCapitalize={'none'}
               autoCorrect={false}
             />
-            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
             <TextInput
               style={styles.inputstyle}
               secureTextEntry={true}
@@ -69,7 +70,7 @@ const SignUpScreen7 = ({ navigation }) => {
               autoCapitalize={'none'}
               autoCorrect={false}
             />
-            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
 
             <TouchableOpacity
               style={styles.button}
@@ -82,14 +83,14 @@ const SignUpScreen7 = ({ navigation }) => {
                   fontWeight: 'bold',
                 }}>
                 Sign Up
-            </Text>
+              </Text>
             </TouchableOpacity>
           </Card>
         </Animatable.View>
         <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
-          <Text style={{ textAlign: 'center', marginTop: 60 }}>
+          <Text style={{textAlign: 'center', marginTop: 60}}>
             Already have an account ?
-            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
               Sign In
             </Text>
           </Text>

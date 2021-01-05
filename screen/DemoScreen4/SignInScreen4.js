@@ -9,13 +9,13 @@ import {
   SafeAreaView,
   ImageBackground,
 } from 'react-native';
-import { Card } from 'react-native-paper';
+import {Card} from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import * as Animatable from 'react-native-animatable';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const SignInScreen4 = ({ navigation }) => {
+const SignInScreen4 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -66,7 +66,7 @@ const SignInScreen4 = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.signupTextStyle}>
-                  <Text style={{ color: '#8b9cb5' }}>Or Sign up with</Text>
+                  <Text style={{color: '#8b9cb5'}}>Or Sign up with</Text>
                 </TouchableOpacity>
 
                 <View style={styles.iconViewStyle}>
@@ -106,10 +106,10 @@ const SignInScreen4 = ({ navigation }) => {
             <TouchableOpacity
               onPress={() => navigation.navigate('SignUpScreen4')}>
               <Text
-                style={{ color: '#8b9cb5', textAlign: 'center', marginTop: 30 }}>
+                style={{color: '#8b9cb5', textAlign: 'center', marginTop: 30}}>
                 Dont Have an Account?
                 <Text
-                  style={{ color: '#FF9F40', fontSize: 18, fontWeight: 'bold' }}>
+                  style={{color: '#FF9F40', fontSize: 18, fontWeight: 'bold'}}>
                   Sign Up
                 </Text>
               </Text>

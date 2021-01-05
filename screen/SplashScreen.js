@@ -12,7 +12,7 @@ import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const Splash = ({ navigation }) => {
+const Splash = ({navigation}) => {
   return (
     <View style={styles.container}>
       <StatusBar
@@ -50,7 +50,7 @@ const Splash = ({ navigation }) => {
 
 export default Splash;
 
-const { height } = Dimensions.get('screen');
+const {height} = Dimensions.get('screen');
 const height_logo = height * 0.28;
 
 const styles = StyleSheet.create({

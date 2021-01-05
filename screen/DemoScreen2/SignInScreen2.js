@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
-const SignInScreen2 = ({ navigation }) => {
+const SignInScreen2 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -25,7 +25,10 @@ const SignInScreen2 = ({ navigation }) => {
       <View>
         <Animatable.Image
           animation="bounceIn"
-          duraton="1500" source={require('../../assets/logo2.png')} style={styles.logo} />
+          duraton="1500"
+          source={require('../../assets/logo2.png')}
+          style={styles.logo}
+        />
       </View>
 
       <Animatable.View animation="fadeInUpBig">
@@ -47,15 +50,15 @@ const SignInScreen2 = ({ navigation }) => {
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+          <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
             Sign In
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen2')}>
-          <Text style={{ textAlign: 'center', marginTop: 10, color: '#fff' }}>
+          <Text style={{textAlign: 'center', marginTop: 10, color: '#fff'}}>
             Don’t have an account ?
-            <Text style={{ color: '#3C82FF', fontSize: 18, fontWeight: 'bold' }}>
+            <Text style={{color: '#3C82FF', fontSize: 18, fontWeight: 'bold'}}>
               Sign Up
             </Text>
           </Text>
@@ -80,7 +83,6 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 4,
     height: Dimensions.get('window').height / 4,
   },
-
 
   inputStyle: {
     paddingLeft: 15,

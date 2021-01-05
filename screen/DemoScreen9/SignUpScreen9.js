@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 
 import {
   View,
@@ -9,15 +9,14 @@ import {
   TextInput,
   ImageBackground,
   Dimensions,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
-import CheckBox from '@react-native-community/checkbox'
+import CheckBox from '@react-native-community/checkbox';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const SignUpScreen9 = ({ navigation }) => {
-
+const SignUpScreen9 = ({navigation}) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
@@ -30,27 +29,27 @@ const SignUpScreen9 = ({ navigation }) => {
       />
       <View style={styles.hederSection}>
         <ImageBackground
-          style={{ width: '100%', height: '100%' }}
+          style={{width: '100%', height: '100%'}}
           source={require('../../assets/bg.png')}>
-
-          <Animatable.Image animation="zoomIn"
+          <Animatable.Image
+            animation="zoomIn"
             style={styles.headerLogo}
-            source={require('../../assets/livingLogo.png')} />
+            source={require('../../assets/livingLogo.png')}
+          />
 
-          <Animatable.View animation="zoomIn"
-            style={styles.buttonSection}>
+          <Animatable.View animation="zoomIn" style={styles.buttonSection}>
             <TouchableOpacity
-              style={[styles.rightbutton, { backgroundColor: '#fff' }]}>
-              <Text style={{ color: '#4CB8C4', fontSize: 18, fontWeight: 'bold' }}>
+              style={[styles.rightbutton, {backgroundColor: '#fff'}]}>
+              <Text
+                style={{color: '#4CB8C4', fontSize: 18, fontWeight: 'bold'}}>
                 Sign In
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[styles.leftbutton, { backgroundColor: '#4CB8C4' }]}
+              style={[styles.leftbutton, {backgroundColor: '#4CB8C4'}]}
               onPress={() => navigation.navigate('SignUpScreen9')}>
-              <Text
-                style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
                 Sign Up
               </Text>
             </TouchableOpacity>
@@ -58,8 +57,7 @@ const SignUpScreen9 = ({ navigation }) => {
         </ImageBackground>
       </View>
 
-      <Animatable.View animation="fadeInLeftBig"
-        style={styles.footerSection}>
+      <Animatable.View animation="fadeInLeftBig" style={styles.footerSection}>
         <View style={styles.cardStyle}>
           <View>
             <TextInput
@@ -104,7 +102,7 @@ const SignUpScreen9 = ({ navigation }) => {
             <LinearGradient
               colors={['#4CB8C4', '#3CD3AD']}
               style={styles.signupButton}>
-              <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
                 {' '}
                 Proceed
               </Text>
@@ -133,7 +131,7 @@ const styles = StyleSheet.create({
   headerLogo: {
     flex: 1,
     resizeMode: 'contain',
-    alignContent: "center",
+    alignContent: 'center',
     alignSelf: 'center',
     width: Dimensions.get('window').width / 2.5,
     height: Dimensions.get('window').height / 13,
@@ -146,7 +144,7 @@ const styles = StyleSheet.create({
   buttonSection: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: "-5%",
+    marginBottom: '-5%',
   },
 
   rightbutton: {

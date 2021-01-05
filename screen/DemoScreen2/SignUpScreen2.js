@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
   StatusBar,
   Dimensions,
-  SafeAreaView
+  SafeAreaView,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
-const SignUpScreen2 = ({ navigation }) => {
+const SignUpScreen2 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
@@ -25,7 +25,9 @@ const SignUpScreen2 = ({ navigation }) => {
         <Animatable.Image
           animation="bounceIn"
           duraton="1500"
-          source={require('../../assets/logo2.png')} style={styles.logo} />
+          source={require('../../assets/logo2.png')}
+          style={styles.logo}
+        />
       </View>
 
       <Animatable.View animation="fadeInUpBig">
@@ -54,7 +56,7 @@ const SignUpScreen2 = ({ navigation }) => {
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => navigation.navigate('HomeScreen')}>
-          <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+          <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
             Sign Up
           </Text>
         </TouchableOpacity>
@@ -69,7 +71,7 @@ const SignUpScreen2 = ({ navigation }) => {
               fontWeight: 'bold',
             }}>
             Already have an account ?
-            <Text style={{ color: '#3C82FF' }}>Sign In</Text>
+            <Text style={{color: '#3C82FF'}}>Sign In</Text>
           </Text>
         </TouchableOpacity>
       </Animatable.View>
@@ -85,7 +87,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'black',
   },
-
 
   logo: {
     resizeMode: 'contain',

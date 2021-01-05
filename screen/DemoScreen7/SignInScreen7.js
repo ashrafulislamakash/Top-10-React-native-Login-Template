@@ -12,9 +12,9 @@ import {
   Dimensions,
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import { Card } from 'react-native-paper';
+import {Card} from 'react-native-paper';
 
-const SignInScreen7 = ({ navigation }) => {
+const SignInScreen7 = ({navigation}) => {
   return (
     <SafeAreaView behavior="padding" style={styles.container}>
       <StatusBar
@@ -30,7 +30,6 @@ const SignInScreen7 = ({ navigation }) => {
           height: '100%',
           resizeMode: 'cover',
         }}>
-
         <Animatable.Image
           animation="flipInY"
           duraton="1500"
@@ -40,7 +39,8 @@ const SignInScreen7 = ({ navigation }) => {
             width: Dimensions.get('window').width / 3,
             alignSelf: 'center',
             resizeMode: 'contain',
-          }} />
+          }}
+        />
 
         <Animatable.View animation="flipInY">
           <Card style={styles.cardStyle}>
@@ -51,7 +51,7 @@ const SignInScreen7 = ({ navigation }) => {
               returnKeyType={'done'}
               autoCorrect={false}
             />
-            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
 
             <TextInput
               style={styles.inputstyle}
@@ -63,7 +63,7 @@ const SignInScreen7 = ({ navigation }) => {
               autoCorrect={false}
             />
 
-            <View style={{ borderBottomColor: '#eee', borderBottomWidth: 1 }} />
+            <View style={{borderBottomColor: '#eee', borderBottomWidth: 1}} />
 
             <TouchableOpacity
               style={styles.button}
@@ -76,16 +76,16 @@ const SignInScreen7 = ({ navigation }) => {
                   fontWeight: 'bold',
                 }}>
                 {' '}
-              Sign In
-            </Text>
+                Sign In
+              </Text>
             </TouchableOpacity>
           </Card>
         </Animatable.View>
 
         <TouchableOpacity onPress={() => navigation.navigate('SignUpScreen7')}>
-          <Text style={{ textAlign: 'center', marginTop: 60 }}>
+          <Text style={{textAlign: 'center', marginTop: 60}}>
             Don’t have an account ?
-            <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}>
+            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
               Sign Up
             </Text>
           </Text>
