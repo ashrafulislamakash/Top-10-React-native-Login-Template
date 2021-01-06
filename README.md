@@ -1,10 +1,8 @@
 
 # Top-10-React-native-Login-Template
-Installation
-Clone my repo
-https://github.com/ashrafulislamakash/Top-10-React-native-Login-Template.git
 
-# Use the package manager npm
+Installation
+## Use the package manager npm
 npm install
 
 # Run Android
