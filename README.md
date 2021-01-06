@@ -1,14 +1,9 @@
-
-# Top-10-React-native-Login-Template
-
 ## Installation
 
 Use the package manager npm
-
 ## npm install
 
 Run Android
-
 ## npx react-native run-android
 
 Run IOS
